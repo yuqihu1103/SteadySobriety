@@ -19,7 +19,7 @@ const app = express();
 //enable session
 app.use(
   session({
-    secret: "mental-health-monitor",
+    secret: "steady-sobriety",
     resave: false,
     saveUninitialized: true,
   })
@@ -41,8 +41,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.get("/login", logoutRoute);
-app.post("/sober-log", isAuthenticated, createSoberLogRoute);
-app.get("/sober-log", isAuthenticated, readSoberLogRoute);
+app.post("/sober-log", createSoberLogRoute);
+app.get("/sober-log", readSoberLogRoute);
 
 //test route
 app.get("/test", (req, res) => {
