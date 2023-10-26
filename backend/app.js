@@ -15,15 +15,6 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
-//enable session
-app.use(
-  session({
-    secret: "steady-sobriety",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
-
 // Middleware to check if the user is authenticated
 function isAuthenticated(req, res, next) {
   if (req.session && req.session.username) {
