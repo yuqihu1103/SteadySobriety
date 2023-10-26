@@ -14,10 +14,10 @@ const client = new MongoClient(uri);
 
 let database;
 async function connectToDatabase() {
-  //console.log("Mongo connecting to", uri);
+  console.log("Mongo connecting to", uri);
   try {
     database = client.db(dbName);
-    console.log("Connected to MongoDB", MONGODB_URI);
+    console.log("Connected to MongoDB");
   } catch (error) {
     console.log("Error with db connection", error);
   }
