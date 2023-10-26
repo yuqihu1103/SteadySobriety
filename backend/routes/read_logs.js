@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Login route
 router.get("/sober-log", async (req, res) => {
-  const username = req.session.username;
+  const { username } = req.body;
 
   const user = await UserModel.getUserByUsername(username);
   if (!user) {

@@ -4,7 +4,7 @@ import SoberLogModel from "../models/sober_logs.js";
 const router = express.Router();
 
 // PUT route for creating a new sober log
-router.put("/create_log", async (req, res) => {
+router.post("/create_log", async (req, res) => {
   const { userId, date } = req.body;
 
   // Server-side validation of userId and date
