@@ -11,6 +11,11 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
+//test route
+app.get("/test", (req, res) => {
+  res.status(200).json({ message: "Logout successful" });
+});
+
 // Start your server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
