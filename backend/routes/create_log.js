@@ -8,7 +8,7 @@ router.post("/sober-log", async (req, res) => {
   const { username, date } = req.body;
 
   // Server-side validation of userId and date
-  if (!usernamee || !date) {
+  if (!username || !date) {
     return res.status(400).json({ error: "Both userId and date are required" });
   }
 
