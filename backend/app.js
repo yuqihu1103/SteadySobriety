@@ -8,6 +8,8 @@ import { connectToDatabase } from "./db/db.js";
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
 import logoutRoute from "./routes/logout.js";
+import createSoberLogRoute from "./routes/create_log.js";
+import readSoberLogRoute from "./routes/read_logs.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -39,6 +41,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.get("/login", logoutRoute);
+app.post("/sober-log", isAuthenticated, createSoberLogRoute);
+app.get("/sober-log", isAuthenticated, readSoberLogRoute);
 
 //test route
 app.get("/test", (req, res) => {
