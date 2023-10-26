@@ -9,7 +9,7 @@ if (process.env.MONGODB_URI) {
   uri = "mongodb://127.0.0.1:27017";
 }
 
-const dbName = "MentalHealthMonitor";
+const dbName = "SteadySobriety";
 const client = new MongoClient(uri);
 
 let database;
