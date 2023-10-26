@@ -8,7 +8,6 @@ const router = express.Router();
 
 // Registration route
 router.post("/register", async (req, res) => {
-  console.log(req.body);
   const { username, email, password } = req.body;
   // server-side validation of username, email, and password
   if (!username || username.length < 3) {
