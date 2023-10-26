@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Use the routes
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
-app.post("/login", logoutRoute);
+app.get("/login", logoutRoute);
 
 //test route
 app.get("/test", (req, res) => {
