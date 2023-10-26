@@ -6,13 +6,6 @@ import { ObjectId } from "mongodb";
 import { getDatabase } from "../db/db.js";
 import bcrypt from "bcryptjs";
 
-// Define the User schema
-//const userSchema = {
-//  username: String,
-//  email: String,
-//  password: String,
-//};
-
 // Create a User model
 const UserModel = {
   async createUser(user) {
@@ -61,11 +54,7 @@ const UserModel = {
       return false; // User not found
     }
 
-    //console.log("Stored Password:", user.password);
-    //console.log("Entered Password:", password);
-
     const passwordMatch = await bcrypt.compare(password, user.password);
-    //console.log("Password Match:", passwordMatch);
 
     return passwordMatch;
   },
