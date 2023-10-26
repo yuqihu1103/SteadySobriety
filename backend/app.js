@@ -7,6 +7,7 @@ import { dirname } from "path";
 import { connectToDatabase } from "./db/db.js";
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
+import logoutRoute from "./routes/logout.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -37,10 +38,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Use the routes
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
+app.post("/login", logoutRoute);
 
 //test route
 app.get("/test", (req, res) => {
-  res.status(200).json({ message: "Logout successful" });
+  res.status(200).json({ message: "Test success!" });
 });
 
 // Start your server
