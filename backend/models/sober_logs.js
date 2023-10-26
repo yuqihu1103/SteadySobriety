@@ -2,10 +2,10 @@ import { getDatabase } from "../db/db.js";
 
 const SoberLogModel = {
   // CREATE a new sober log
-  async createSoberLog(userId, date) {
+  async createSoberLog(username, date) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
-    return soberLogsCollection.insertOne({ userId, date });
+    return soberLogsCollection.insertOne({ username, date });
   },
 
   // READ a user's sober logs
