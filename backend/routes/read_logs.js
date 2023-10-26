@@ -18,7 +18,7 @@ router.get("/sober-log", async (req, res) => {
   const userLogHistory = await SoberLogsModel.readSoberLogs(username);
 
   return res.status(200).json({
-    message: "Log history retrieevef",
+    message: "Log history retrieved.",
     userLogHistory: userLogHistory,
   });
 });

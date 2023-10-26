@@ -9,10 +9,10 @@ const SoberLogModel = {
   },
 
   // READ a user's sober logs
-  async readSoberLogs(userId) {
+  async readSoberLogs(username) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
-    return soberLogsCollection.find({ userId }).toArray();
+    return soberLogsCollection.find({ username }).toArray();
   },
 
   // UPDATE a sober log (assuming by date)
