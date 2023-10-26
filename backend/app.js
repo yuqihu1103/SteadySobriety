@@ -1,5 +1,4 @@
 import express from "express";
-import session from "express-session";
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
