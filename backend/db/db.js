@@ -17,7 +17,7 @@ async function connectToDatabase() {
   //console.log("Mongo connecting to", uri);
   try {
     database = client.db(dbName);
-    console.log("Connected to MongoDB");
+    console.log("Connected to MongoDB", MONGODB_URI);
   } catch (error) {
     console.log("Error with db connection", error);
   }
