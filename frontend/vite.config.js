@@ -12,4 +12,5 @@ export default defineConfig({
       ws: true,
     },
   },
+  base: process.env.NODE_ENV === "production" ? "/SteadySobriety/" : "/",
 });
