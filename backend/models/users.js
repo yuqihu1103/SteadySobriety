@@ -1,7 +1,7 @@
 /*This module defines the User model and provides CRUD (Create, Read - get by username or email, 
 Update, Delete) operations for managing user data in MongoDB. It also includes functions for 
 password hashing and password verification.*/
-
+//Yuqi Hu
 import { ObjectId } from "mongodb";
 import { getDatabase } from "../db/db.js";
 import bcrypt from "bcryptjs";
