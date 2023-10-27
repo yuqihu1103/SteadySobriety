@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://steady-sobriety.onrender.com/"
+    "https://steady-sobriety.onrender.com"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
