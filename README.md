@@ -4,19 +4,16 @@
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
-**Deployment:**
-
-**Backend Service (with Render + MongoDb Altas) Only:** https://steady-sobriety-api.onrender.com/
+**Deployment:** https://steady-sobriety.onrender.com/
 
 **Project Objectives:**
 
-Aims: help people quit drinking and stay sober
-
-Functions:
-
-1. register and login;
-2. log sober days and track progress;
-3. a forum for users to communicate
+SteadySobriety is a web application designed to provide essential tools and support for individuals seeking to overcome alcohol abuse
+and maintain lasting sobriety. This platform offers a range of features that help users on their journey towards a healthier,
+alcohol-free life. After registering and logging in, user can log the time of their last drink. User can keep track of their current
+and longest sobriety streak and compare with other users on the scoreboard. We'll also add a discussion forum in the future.
+By combining user-friendly interfaces, data tracking, community engagement, and motivational elements, SteadySobriety strives to be a
+valuable resource in the battle against alcohol addiction.
 
 ## Project Demo and Presentation
 
