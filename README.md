@@ -33,20 +33,11 @@ Design documents can be found in the [docs](docs) folder, including:
 2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
 3. [Design Mockup](docs/design_mockup.pdf) overview:
 
-## Technology Stack
+## Technologies
 
-Backend:
+**Backend**: Node + Express, MongoDB, JWT
 
-1. DB: models - users, sober-logs, forum-posts; support CRUB operations on each model
-2. routes: register(post)/login(post)/logout(get), sober-log (post/get), forum-posts(post/get)
-3. (unit tests) or test with postman before deploying
-4. deploy backend service (Render)
-
-Frontend:
-
-1. start app with vite
-2. components: to be designed, should serve essential functions above
-3. deploy application
+**Frontend**: React, Vite
 
 ## License
 
