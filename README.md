@@ -33,6 +33,8 @@ Design documents can be found in the [docs](docs) folder, including:
 2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
 3. [Design Mockup](docs/design_mockup.pdf) overview:
 
+<img width="523" alt="design mockup overview" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/e11567d2-612c-4429-9078-e846fb4e50d8">
+
 ## Technologies
 
 **Backend**: Node + Express, MongoDB, JWT
