@@ -21,16 +21,16 @@ function Register() {
     setError(""); // Clear previous errors
 
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch("/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
+      
       const data = await response.json();
-
+      
       if (response.status === 201) {
         console.log("Registration successful:", data);
       } else {
