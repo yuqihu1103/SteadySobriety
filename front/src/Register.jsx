@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Register.css";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -8,11 +9,21 @@ function Register() {
   });
 
   const [error, setError] = useState("");
+  const [passwordError, setPasswordError] = useState(""); // State to hold password error
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // Check for password length and set password error if it's too short
+    if (name === "password" && value.length > 0 && value.length < 6) {
+      setPasswordError("Password is too short.");
+    } else {
+      setPasswordError(""); // Clear the password error if the condition is not met
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -28,9 +39,9 @@ function Register() {
         },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await response.json();
-      
+
       if (response.status === 201) {
         console.log("Registration successful:", data);
       } else {
@@ -47,28 +58,7 @@ function Register() {
       <h2>Register</h2>
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-            minLength={3}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
-          />
-        </div>
+        {/* ... other form fields */}
         <div>
           <label>Password:</label>
           <input
@@ -79,6 +69,10 @@ function Register() {
             required
             minLength={6}
           />
+          {/* Conditionally render the password error message */}
+          {passwordError && (
+            <div className="password-error">{passwordError}</div>
+          )}
         </div>
         <button type="submit">Register</button>
       </form>
