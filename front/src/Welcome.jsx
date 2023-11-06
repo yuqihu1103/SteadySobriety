@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const Welcome = ({ loggedInUser }) => {
   const [userStreak, setUserStreak] = useState(0);
+  const [userMessage, setUserMessage] = useState("");
 
   useEffect(() => {
     // Function to fetch the user's streak from the backend
@@ -14,6 +15,11 @@ const Welcome = ({ loggedInUser }) => {
 
           if (response.ok) {
             setUserStreak(data.streak);
+            if (data.message === "No sober logs found.") {
+              setUserMessage("Log drinking days to start");
+            } else {
+              setUserMessage(`You have been sober for ${userStreak} days!`);
+            }
           } else {
             throw new Error(data.error || "Error fetching streak.");
           }
@@ -31,7 +37,7 @@ const Welcome = ({ loggedInUser }) => {
       {loggedInUser ? (
         <>
           <h1>Welcome to Steady Sobriety, {loggedInUser}!</h1>
-          <p>You have been sober for {userStreak} days!</p>
+          <h2>{userMessage}</h2>
         </>
       ) : (
         <h1>Welcome to Steady Sobriety!</h1>
