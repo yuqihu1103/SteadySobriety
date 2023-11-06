@@ -10,6 +10,10 @@ const DrinkingLog = ({ loggedInUser }) => {
     console.log(loggedInUser);
     if (loggedInUser) {
       try {
+        if (logDate > new Date()) {
+          alert("Cannot pick a future date!");
+          return;
+        }
         const response = await fetch("/sober-log", {
           method: "POST",
           headers: {
