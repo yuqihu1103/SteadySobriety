@@ -15,11 +15,11 @@ const Welcome = ({ loggedInUser }) => {
 
           if (response.ok) {
             setUserStreak(data.streak);
-            if (data.message === "No sober logs found.") {
-              setUserMessage("Log drinking days to start");
-            } else {
-              setUserMessage(`You have been sober for ${userStreak} days!`);
+            let message = "Log drinking days to start"; // Default message
+            if (data.message !== "No sober logs found.") {
+              message = `You have been sober for ${data.streak} days!`;
             }
+            setUserMessage(message);
           } else {
             throw new Error(data.error || "Error fetching streak.");
           }
