@@ -5,6 +5,7 @@ password hashing and password verification.*/
 import { ObjectId } from "mongodb";
 import { getDatabase } from "../db.js";
 import bcrypt from "bcryptjs";
+import SoberLogModel from "./sober_logs.js";
 
 // Create a User model
 const UserModel = {
@@ -57,6 +58,32 @@ const UserModel = {
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     return passwordMatch;
+  },
+
+  // for leaderboard
+  async getAllUsersWithStreaks() {
+    const db = getDatabase();
+    const users = await db.collection("users").find().toArray();
+
+    const usersWithStreaks = await Promise.all(
+      users.map(async (user) => {
+        const soberLogs = await SoberLogModel.readSoberLogs(user.username);
+        if (soberLogs.length === 0) {
+          return { username: user.username, streak: 0 };
+        }
+
+        soberLogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const lastLogDate = new Date(soberLogs[0].date);
+        const today = new Date();
+        const daysDifference = Math.floor(
+          (today - lastLogDate) / (1000 * 60 * 60 * 24)
+        );
+
+        return { username: user.username, streak: daysDifference };
+      })
+    );
+
+    return usersWithStreaks;
   },
 };
 

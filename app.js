@@ -10,6 +10,7 @@ import logoutRoute from "./routes/logout.js";
 import createSoberLogRoute from "./routes/create_log.js";
 import readSoberLogRoute from "./routes/read_logs.js";
 import streakRoute from "./routes/streak.js";
+import leaderboardRoute from "./routes/leadboard.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -37,6 +38,7 @@ app.get("/login", logoutRoute);
 app.post("/sober-log", createSoberLogRoute);
 app.get("/sober-log", readSoberLogRoute);
 app.get("/streak/:username", streakRoute);
+app.get("/leaderboard", leaderboardRoute);
 
 //test route
 app.get("/test", (req, res) => {
