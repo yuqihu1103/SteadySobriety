@@ -36,7 +36,7 @@ app.post("/login", loginRoute);
 app.get("/login", logoutRoute);
 app.post("/sober-log", createSoberLogRoute);
 app.get("/sober-log", readSoberLogRoute);
-app.get("/streak", streakRoute);
+app.get("/streak/:username", streakRoute);
 
 //test route
 app.get("/test", (req, res) => {
