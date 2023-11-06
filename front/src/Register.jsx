@@ -58,7 +58,28 @@ function Register() {
       <h2>Register</h2>
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
-        {/* ... other form fields */}
+        <div>
+          <label>Username:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+            minLength={3}
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+          />
+        </div>
         <div>
           <label>Password:</label>
           <input
