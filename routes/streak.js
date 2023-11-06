@@ -10,6 +10,13 @@ router.get("/streak/:username", async (req, res) => {
   const { username } = req.params;
 
   try {
+    const userExists = await UserModel.getUserByUsername(username);
+
+    if (!userExists) {
+      res.status(404).json({ error: "User not found." });
+      return; // Exit the route
+    }
+
     // Retrieve the user's sober logs
     const soberLogs = await SoberLogModel.readSoberLogs(username);
 
