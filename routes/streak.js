@@ -1,6 +1,7 @@
 // Import necessary modules and the SoberLogModel
 import express from "express";
 import SoberLogModel from "../db/models/sober_logs.js";
+import UserModel from "../db/models/users.js";
 
 // Create an Express router
 const router = express.Router();
