@@ -25,7 +25,9 @@ router.post("/login", async (req, res) => {
   const passwordMatch = await UserModel.verifyPassword(user.email, password);
 
   if (passwordMatch) {
-    res.status(200).json({ message: "Login successful" });
+    res
+      .status(200)
+      .json({ username: user.username, message: "Login successful" });
   } else {
     res.status(401).json({ error: "Invalid password" });
   }

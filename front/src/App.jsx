@@ -7,10 +7,13 @@ import Leaderboard from "./Leaderboard";
 import IntroScreen from "./IntroScreen";
 
 function App() {
+  // Initialize the state to store the username
+  const [loggedInUser, setLoggedInUser] = useState();
+
   return (
     <div>
-      <Register />
-      <Login />
+      <Register setLoggedInUser={setLoggedInUser} />
+      <Login setLoggedInUser={setLoggedInUser} />
       <IntroScreen />
       <Leaderboard />
     </div>
