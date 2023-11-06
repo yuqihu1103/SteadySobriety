@@ -45,6 +45,7 @@ function Register({ setLoggedInUser }) {
       if (response.status === 201) {
         console.log("Registration successful:", data);
         setLoggedInUser(data.username);
+        localStorage.setItem("loggedInUser", JSON.stringify(data.username));
         console.log(`loggedin user set to ${data.username}`);
       } else {
         setError(data.error);

@@ -9,7 +9,11 @@ import Welcome from "./Welcome";
 
 function App() {
   // Initialize the state to store the username
-  const [loggedInUser, setLoggedInUser] = useState();
+  const [loggedInUser, setLoggedInUser] = useState(
+    JSON.parse(localStorage.getItem("loggedInUser"))
+  );
+
+  //on logout: localStorage.removeItem("loggedInUser");
 
   return (
     <div>
