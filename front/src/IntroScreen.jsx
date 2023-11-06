@@ -6,7 +6,7 @@ const IntroScreen = () => {
     <div className="intro-screen">
       <header className="intro-header">
         <h1>Welcome to Steady Sobriety</h1>
-        <img src="/path-to-main-photo.jpg" alt="Main" className="main-photo" />
+        <img src="quitDrinking.jpg" alt="Main" className="main-photo" />
         <p className="intro-text">
           SteadySobriety is a web application designed to provide essential
           tools and support for individuals seeking to overcome alcohol abuse
