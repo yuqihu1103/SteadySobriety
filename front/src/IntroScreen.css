@@ -1,0 +1,27 @@
+.intro-screen {
+  background: url("/path-to-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.intro-nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  /* Add more styles for your nav links here */
+}
+
+.intro-header {
+  text-align: center;
+  padding: 50px;
+}
+
+.main-photo {
+  width: 80%;
+  height: auto;
+}
+
+.intro-text {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  /* Add more styling for the paragraph text here */
+}
