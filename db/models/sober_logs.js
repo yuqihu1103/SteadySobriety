@@ -27,10 +27,10 @@ const SoberLogModel = {
   },
 
   // DELETE a sober log
-  async deleteSoberLog(userId, date) {
+  async deleteSoberLog(username, date) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
-    return soberLogsCollection.deleteOne({ userId, date });
+    return soberLogsCollection.deleteOne({ username, date });
   },
 };
 
