@@ -37,6 +37,7 @@ function Login({ setLoggedInUser }) {
       if (response.status === 200) {
         console.log("Login successful:", data);
         setLoggedInUser(data.username);
+        console.log(`loggedin user set to ${data.username}`);
       } else {
         console.error("Login error:", data.error);
       }

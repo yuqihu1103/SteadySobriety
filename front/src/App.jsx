@@ -1,6 +1,6 @@
 // src/App.jsx
 
-import React from "react";
+import React, { useState } from "react";
 import Register from "./Register";
 import Login from "./Login";
 import Leaderboard from "./Leaderboard";

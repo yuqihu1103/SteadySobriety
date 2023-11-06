@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 
-function Register({ loggedInUser, setLoggedInUser }) {
+function Register({ setLoggedInUser }) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -44,6 +44,8 @@ function Register({ loggedInUser, setLoggedInUser }) {
 
       if (response.status === 201) {
         console.log("Registration successful:", data);
+        setLoggedInUser(data.username);
+        console.log(`loggedin user set to ${data.username}`);
       } else {
         setError(data.error);
       }
