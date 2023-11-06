@@ -5,6 +5,7 @@ import Register from "./Register";
 import Login from "./Login";
 import Leaderboard from "./Leaderboard";
 import IntroScreen from "./IntroScreen";
+import Welcome from "./Welcome";
 
 function App() {
   // Initialize the state to store the username
@@ -16,6 +17,7 @@ function App() {
       <Login setLoggedInUser={setLoggedInUser} />
       <IntroScreen />
       <Leaderboard />
+      <Welcome loggedInUser={loggedInUser} />
     </div>
   );
 }
