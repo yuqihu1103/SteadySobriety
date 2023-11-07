@@ -7,8 +7,8 @@ import DrinkingHistory from "./DrinkingHistory";
 function Dashboard({ loggedInUser, setLoggedInUser }) {
   return (
     <div>
-      <Leaderboard />
       <Welcome loggedInUser={loggedInUser} />
+      <Leaderboard />
       <DrinkingLog loggedInUser={loggedInUser} />
       <DrinkingHistory loggedInUser={loggedInUser} />
     </div>

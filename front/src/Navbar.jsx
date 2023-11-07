@@ -1,12 +1,22 @@
 import React from "react";
 
-function Navbar({ loggedInUser, handleLogout }) {
+function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
+  // Define functions to change the active component
+  const showIntro = () => {
+    setActiveComponent("Intro");
+  };
+
+  const showLogin = () => {
+    setActiveComponent("Login");
+  };
+
+  const showRegister = () => {
+    setActiveComponent("Register");
+  };
+
   return (
     <nav>
       <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
         {loggedInUser ? (
           <li>
             <a href="#" onClick={handleLogout}>
@@ -16,10 +26,19 @@ function Navbar({ loggedInUser, handleLogout }) {
         ) : (
           <>
             <li>
-              <a href="/login">Login</a>
+              <a href="#" onClick={showIntro}>
+                Home
+              </a>
             </li>
             <li>
-              <a href="/register">Register</a>
+              <a href="#" onClick={showLogin}>
+                Login
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={showRegister}>
+                Register
+              </a>
             </li>
           </>
         )}
