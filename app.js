@@ -36,7 +36,7 @@ app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.get("/login", logoutRoute);
 app.post("/sober-log", createSoberLogRoute);
-app.get("/sober-log", readSoberLogRoute);
+app.get("/sober-log/:username", readSoberLogRoute);
 app.get("/streak/:username", streakRoute);
 app.get("/leaderboard", leaderboardRoute);
 
