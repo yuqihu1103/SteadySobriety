@@ -1,4 +1,5 @@
 import React from "react";
+import "./Resources.css";
 
 const Resources = () => {
   const resources = [
@@ -25,22 +26,17 @@ const Resources = () => {
   return (
     <div className="resources">
       <h2>Additional Tools and Resources</h2>
-      <div className="resources-list">
+      <div className="resource-cards-container">
         {resources.map((resource, index) => (
-          <a
-            key={index}
-            href={resource.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="resource-item"
-          >
-            <img
-              src={resource.image}
-              alt={resource.alt}
-              className="resource-image"
-            />
-            <p className="resource-title">{resource.title}</p>
-          </a>
+          <div key={index} className="resource-card">
+            <div className="resource-image">
+              <img src={resource.image} alt={resource.title} />
+            </div>
+            <div className="resource-content">
+              <h3 className="resource-title">{resource.title}</h3>
+              <p className="resource-description">{resource.alt}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
