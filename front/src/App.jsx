@@ -4,6 +4,7 @@ import Login from "./Login";
 import IntroScreen from "./IntroScreen";
 import Dashboard from "./Dashboard";
 import Navbar from "./Navbar";
+import Resources from "./Resources";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(
@@ -48,7 +49,7 @@ function App() {
     } else if (componentName === "Dashboard") {
       return <Dashboard loggedInUser={loggedInUser} />;
     } else if (componentName === "Resources") {
-      return <p>resources</p>;
+      return <Resources />;
     } else {
       return null;
     }
