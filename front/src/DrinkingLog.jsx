@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker"; // Make sure to install this package
 import "react-datepicker/dist/react-datepicker.css";
 
-const DrinkingLog = ({ loggedInUser }) => {
+const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
   const [logDate, setLogDate] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [showSaveButton, setShowSaveButton] = useState(false); // Control the visibility of the Save button
@@ -36,6 +36,7 @@ const DrinkingLog = ({ loggedInUser }) => {
 
       if (response.ok) {
         alert("Log created successfully!");
+        setNumDrinkingLogs(numDrinkingLogs + 1);
       } else {
         throw new Error(data.error || "Error logging drinking day.");
       }

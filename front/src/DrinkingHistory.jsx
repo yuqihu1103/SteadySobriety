@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const DrinkingHistory = ({ loggedInUser }) => {
+const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   const [logHistory, setLogHistory] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const DrinkingHistory = ({ loggedInUser }) => {
     };
 
     fetchLogHistory();
-  }, [loggedInUser]);
+  }, [loggedInUser, numDrinkingLogs]);
 
   return (
     <div>

@@ -5,12 +5,20 @@ import DrinkingLog from "./DrinkingLog";
 import DrinkingHistory from "./DrinkingHistory";
 
 function Dashboard({ loggedInUser, setLoggedInUser }) {
+  const [numDrinkingLogs, setNumDrinkingLogs] = useState(0);
   return (
     <div>
       <Welcome loggedInUser={loggedInUser} />
       <Leaderboard />
-      <DrinkingLog loggedInUser={loggedInUser} />
-      <DrinkingHistory loggedInUser={loggedInUser} />
+      <DrinkingLog
+        loggedInUser={loggedInUser}
+        setNumDrinkingLogs={setNumDrinkingLogs}
+        numDrinkingLogs={numDrinkingLogs}
+      />
+      <DrinkingHistory
+        loggedInUser={loggedInUser}
+        numDrinkingLogs={numDrinkingLogs}
+      />
     </div>
   );
 }
