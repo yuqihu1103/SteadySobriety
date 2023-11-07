@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 function Login({ setLoggedInUser }) {
   const [formData, setFormData] = useState({
@@ -85,5 +86,9 @@ function Login({ setLoggedInUser }) {
     </div>
   );
 }
+
+Login.propTypes = {
+  setLoggedInUser: PropTypes.func.isRequired,
+};
 
 export default Login;

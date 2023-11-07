@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
+import PropTypes from "prop-types";
 
 function Register({ setLoggedInUser }) {
   const [formData, setFormData] = useState({
@@ -103,5 +104,9 @@ function Register({ setLoggedInUser }) {
     </div>
   );
 }
+
+Register.propTypes = {
+  setLoggedInUser: PropTypes.func.isRequired,
+};
 
 export default Register;

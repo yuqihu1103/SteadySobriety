@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
   // Define functions to change the active component
@@ -66,5 +67,11 @@ function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  loggedInUser: PropTypes.object, // if loggedInUser can be null/undefined, don't use isRequired
+  handleLogout: PropTypes.func.isRequired,
+  setActiveComponent: PropTypes.func.isRequired,
+};
 
 export default Navbar;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"; // Make sure to install this package
 import "react-datepicker/dist/react-datepicker.css";
+import PropTypes from "prop-types";
 
 const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
   const [logDate, setLogDate] = useState(new Date());
@@ -59,6 +60,12 @@ const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
       {showSaveButton && <button onClick={handleSaveLog}>Save Log</button>}
     </div>
   );
+};
+
+DrinkingLog.propTypes = {
+  loggedInUser: PropTypes.string, // assuming loggedInUser is a string, and it can be null/undefined
+  setNumDrinkingLogs: PropTypes.func.isRequired,
+  numDrinkingLogs: PropTypes.number.isRequired,
 };
 
 export default DrinkingLog;

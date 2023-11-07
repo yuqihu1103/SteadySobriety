@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Welcome from "./Welcome";
 import Leaderboard from "./Leaderboard";
 import DrinkingLog from "./DrinkingLog";
@@ -22,5 +23,10 @@ function Dashboard({ loggedInUser, setLoggedInUser }) {
     </div>
   );
 }
+
+Dashboard.propTypes = {
+  loggedInUser: PropTypes.object.isRequired,
+  setLoggedInUser: PropTypes.func.isRequired,
+};
 
 export default Dashboard;

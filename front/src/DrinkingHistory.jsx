@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   const [logHistory, setLogHistory] = useState([]);
@@ -42,6 +43,11 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
       </ul>
     </div>
   );
+};
+
+DrinkingHistory.propTypes = {
+  loggedInUser: PropTypes.string.isRequired, // assuming loggedInUser is a string identifier
+  numDrinkingLogs: PropTypes.number.isRequired,
 };
 
 export default DrinkingHistory;
