@@ -5,7 +5,7 @@ import Leaderboard from "./Leaderboard";
 import DrinkingLog from "./DrinkingLog";
 import DrinkingHistory from "./DrinkingHistory";
 
-function Dashboard({ loggedInUser, setLoggedInUser }) {
+function Dashboard({ loggedInUser }) {
   const [numDrinkingLogs, setNumDrinkingLogs] = useState(0);
   return (
     <div>
@@ -26,7 +26,6 @@ function Dashboard({ loggedInUser, setLoggedInUser }) {
 
 Dashboard.propTypes = {
   loggedInUser: PropTypes.object.isRequired,
-  setLoggedInUser: PropTypes.func.isRequired,
 };
 
 export default Dashboard;
