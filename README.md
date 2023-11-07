@@ -37,7 +37,7 @@ Design documents can be found in the [docs](docs) folder, including:
 
 ## Technologies
 
-**Backend**: Node + Express, MongoDB, JWT
+**Backend**: Node + Express, MongoDB
 
 **Frontend**: React, Vite
 
