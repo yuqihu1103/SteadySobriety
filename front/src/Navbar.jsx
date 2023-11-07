@@ -14,15 +14,35 @@ function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
     setActiveComponent("Register");
   };
 
+  const showResources = () => {
+    setActiveComponent("Resources");
+  };
+
+  const showDashboard = () => {
+    setActiveComponent("Dashboard");
+  };
+
   return (
     <nav>
       <ul>
+        <li>
+          <a href="#" onClick={showResources}>
+            Resources
+          </a>
+        </li>
         {loggedInUser ? (
-          <li>
-            <a href="#" onClick={handleLogout}>
-              Logout
-            </a>
-          </li>
+          <>
+            <li>
+              <a href="#" onClick={showDashboard}>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={handleLogout}>
+                Logout
+              </a>
+            </li>
+          </>
         ) : (
           <>
             <li>
