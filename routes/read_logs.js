@@ -6,8 +6,9 @@ import UserModel from "../db/models/users.js";
 // Create an Express router
 const router = express.Router();
 
-router.get("/sober-log/:username", async (req, res) => {
-  const { username } = req.params;
+// Login route
+router.get("/sober-log", async (req, res) => {
+  const { username } = req.body;
 
   const user = await UserModel.getUserByUsername(username);
   if (!user) {
