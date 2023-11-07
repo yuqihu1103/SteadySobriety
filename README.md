@@ -19,7 +19,7 @@ valuable resource in the battle against alcohol addiction.
 
 **Project Demo Video:** [3-min Demo]()
 
-**Project Presentation and Slides:** [2-min Presentation]() | [Slides]()
+**Project Presentation and Slides:** [2-min Presentation]() | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
 
 **Overview(gif)**
 
@@ -37,7 +37,7 @@ Design documents can be found in the [docs](docs) folder, including:
 
 ## Technologies
 
-**Backend**: Node + Express, MongoDB, JWT
+**Backend**: Node + Express, MongoDB
 
 **Frontend**: React, Vite
 
