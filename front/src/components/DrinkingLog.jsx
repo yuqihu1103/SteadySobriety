@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker"; // Make sure to install this package
 import "react-datepicker/dist/react-datepicker.css";
 import PropTypes from "prop-types";
+import "../styles/DrinkingLog.css";
 
 const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
   const [logDate, setLogDate] = useState(new Date());

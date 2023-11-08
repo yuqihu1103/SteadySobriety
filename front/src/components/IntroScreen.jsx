@@ -1,5 +1,5 @@
 import React from "react";
-import "./IntroScreen.css";
+import "../styles/IntroScreen.css";
 
 const IntroScreen = () => {
   return (

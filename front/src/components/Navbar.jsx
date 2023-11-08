@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Navbar.css";
+import "../styles/Navbar.css";
 
 function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
   // Define functions to change the active component

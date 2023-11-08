@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Register.css";
+import "../styles/Register.css";
 import PropTypes from "prop-types";
 
 function Register({ setLoggedInUser }) {

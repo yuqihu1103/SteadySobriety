@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Register from "./Register";
-import Login from "./Login";
-import IntroScreen from "./IntroScreen";
-import Dashboard from "./Dashboard";
-import Navbar from "./Navbar";
-import Resources from "./Resources";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import IntroScreen from "./components/IntroScreen";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
+import Resources from "./components/Resources";
+import "./styles/App.css";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(
