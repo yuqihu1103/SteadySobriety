@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./Login.css";
 
 function Login({ setLoggedInUser }) {
   const [formData, setFormData] = useState({
