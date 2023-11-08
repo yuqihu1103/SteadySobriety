@@ -25,14 +25,17 @@ function Leaderboard() {
 
   return (
     <div className="container mt-4 leaderboard">
-      <h2 className="mb-3">Leaderboard</h2>
-      <div className="d-flex justify-content-between mb-3">
-        <span>Last Updated: {lastUpdated}</span>
-        <button className="btn btn-primary" onClick={fetchLeaderboardData}>
+      <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <span className="last-update">Last Updated: {lastUpdated}</span>
+        <button
+          className="btn btn-primary refresh"
+          onClick={fetchLeaderboardData}
+        >
           Refresh
         </button>
       </div>
-      <div className="table-responsive">
+      <div className="table-responsive leader-table">
         <table className="table">
           <thead>
             <tr>
@@ -45,7 +48,16 @@ function Leaderboard() {
             {leaderboardData.map((entry, index) => (
               <tr key={entry.username}>
                 <td>{index + 1}</td>
-                <td>{entry.username}</td>
+                <td>
+                  {index === 0
+                    ? "🥇"
+                    : index === 1
+                    ? "🥈"
+                    : index === 2
+                    ? "🥉"
+                    : ""}
+                  {entry.username}
+                </td>
                 <td>{entry.streak} days</td>
               </tr>
             ))}

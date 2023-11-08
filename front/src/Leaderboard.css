@@ -6,30 +6,38 @@
   max-width: 600px;
   margin: 0 auto;
   overflow: auto;
-  max-height: 300px;
+  max-height: 480px;
+  background-image: url("/leaderboard_background.png");
+  border: 0.3em double #8271d2;
+  border-radius: 6%;
 }
 
 /* Style the header */
-h2 {
-  color: #333;
+.leaderboard-title {
+  margin-top: 3%;
+  color: #fff;
 }
 
 /* Style the last updated info */
-.div-last-updated {
-  font-size: 14px;
-  color: #777;
+.last-update {
+  font-size: 1em;
+  color: rgb(207, 218, 227);
+  margin-top: 1%;
+  text-align: right;
+  margin-left: 10%;
 }
 
 /* Style the refresh button */
-.btn-refresh {
+.refresh {
   background-color: #5f9ea0;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 10%;
 }
 
-.btn-refresh:hover {
+.refresh:hover {
   background-color: #4f8e90;
 }
 
@@ -70,4 +78,11 @@ h2 {
 
 .table tbody tr:hover {
   background-color: #f4f4f4;
+}
+
+.leader-table {
+  max-height: 300px; /* Set the maximum height for the scrollable container */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+  border-radius: 6%;
+  margin-bottom: 3%;
 }
