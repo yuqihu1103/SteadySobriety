@@ -1,3 +1,66 @@
 .password-error {
-  color: red;
+  color: #ff0000;
+}
+
+.register-header {
+  color: #000;
+}
+
+/* Align the form to the center of the page */
+.register-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 50px auto;
+  margin-top: 8%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form header */
+.register-form h2 {
+  margin-bottom: 20px;
+  color: #5f9ea0;
+}
+
+/* Style form labels and inputs */
+.register-form label {
+  margin-bottom: 5px;
+  display: block;
+  color: #666;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style the submit button */
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #4f8e90;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 15px;
+  }
 }

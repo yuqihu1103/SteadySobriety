@@ -51,7 +51,7 @@ function Login({ setLoggedInUser }) {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2 className="login-header">Login</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="credentialType">Login with:</label>

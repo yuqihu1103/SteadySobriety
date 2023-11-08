@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Register.css";
+import "../styles/Register.css"; // Import the Register component's CSS file
 import PropTypes from "prop-types";
 
 function Register({ setLoggedInUser }) {
@@ -58,10 +58,13 @@ function Register({ setLoggedInUser }) {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+    <div className="register-container">
+      {" "}
+      {/* Add a class name for the container */}
+      <h2 className="register-header">Register</h2>{" "}
+      {/* Add a class name for the header */}
       {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+      <form className="register-form" onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
           <input
@@ -99,7 +102,10 @@ function Register({ setLoggedInUser }) {
             <div className="password-error">{passwordError}</div>
           )}
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className="register-button">
+          Register
+        </button>{" "}
+        {/* Add a class name for the button */}
       </form>
     </div>
   );

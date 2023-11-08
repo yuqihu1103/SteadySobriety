@@ -1,19 +1,17 @@
-/* General styles */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-  background: #f4f4f4; /* Light grey background */
-}
-
 /* Align the form to the center of the page */
 .login-container {
   width: 100%;
   max-width: 320px;
   margin: 50px auto;
+  margin-top: 8%;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  color: #000;
 }
 
 /* Style the form header */
