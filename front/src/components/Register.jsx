@@ -9,7 +9,7 @@ function Register({ setLoggedInUser }) {
     password: "",
   });
 
-  const [error, setError] = useState("");
+  const [registerError, setRegisterError] = useState("");
   const [passwordError, setPasswordError] = useState(""); // State to hold password error
 
   const handleChange = (e) => {
@@ -30,7 +30,7 @@ function Register({ setLoggedInUser }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setRegisterError(""); // Clear previous errors
 
     try {
       const response = await fetch("/register", {
@@ -49,10 +49,10 @@ function Register({ setLoggedInUser }) {
         localStorage.setItem("loggedInUser", JSON.stringify(data.username));
         console.log(`loggedin user set to ${data.username}`);
       } else {
-        setError(data.error);
+        setRegisterError(data.error);
       }
     } catch (error) {
-      setError("An error occurred while registering.");
+      setRegisterError("An error occurred while registering.");
       console.error("There was an error:", error);
     }
   };
@@ -63,7 +63,7 @@ function Register({ setLoggedInUser }) {
       {/* Add a class name for the container */}
       <h2 className="register-header">Register</h2>{" "}
       {/* Add a class name for the header */}
-      {error && <div className="error">{error}</div>}
+      <div className="register-error">{registerError}</div>
       <form className="register-form" onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
@@ -99,7 +99,7 @@ function Register({ setLoggedInUser }) {
           />
           {/* Conditionally render the password error message */}
           {passwordError && (
-            <div className="password-error">{passwordError}</div>
+            <div className="register-error">{passwordError}</div>
           )}
         </div>
         <button type="submit" className="register-button">

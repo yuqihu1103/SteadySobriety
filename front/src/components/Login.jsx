@@ -8,6 +8,7 @@ function Login({ setLoggedInUser }) {
     password: "",
   });
   const [credentialType, setCredentialType] = useState("Username"); // Default to "Username"
+  const [loginError, setLoginError] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -43,6 +44,7 @@ function Login({ setLoggedInUser }) {
         console.log(`loggedin user set to ${data.username}`);
       } else {
         console.error("Login error:", data.error);
+        setLoginError(data.error);
       }
     } catch (error) {
       console.error("There was an error:", error);
@@ -52,6 +54,7 @@ function Login({ setLoggedInUser }) {
   return (
     <div className="login-container">
       <h2 className="login-header">Login</h2>
+      <div className="login-error">{loginError}</div>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="credentialType">Login with:</label>
