@@ -32,15 +32,26 @@ function generateMockLogs(users) {
   const mockLogs = [];
 
   users.forEach((user) => {
-    let logDate = casual.moment;
+    let logDate = randomDateWithinPastYears(1);
+
     const log = {
       username: user.username,
-      date: logDate.toDate(),
+      date: logDate,
     };
     mockLogs.push(log);
   });
 
   return mockLogs;
+}
+
+function randomDateWithinPastYears(years) {
+  const now = new Date();
+  const pastDate = new Date(now);
+  pastDate.setFullYear(now.getFullYear() - years);
+
+  const randomTime =
+    pastDate.getTime() + Math.random() * (now.getTime() - pastDate.getTime());
+  return new Date(randomTime);
 }
 
 // Generate mock data with 1000 records
