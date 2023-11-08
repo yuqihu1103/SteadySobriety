@@ -86,4 +86,19 @@ const UserModel = {
   },
 };
 
+async function calculateUserStreak(user) {
+  const soberLogs = await SoberLogModel.readSoberLogs(user.username);
+  if (soberLogs.length === 0) {
+    return { username: user.username, streak: 0 };
+  }
+
+  const lastLogDate = new Date(soberLogs[0].date);
+  const today = new Date();
+  const daysDifference = Math.floor(
+    (today - lastLogDate) / (1000 * 60 * 60 * 24)
+  );
+
+  return { username: user.username, streak: daysDifference };
+}
+
 export default UserModel;
