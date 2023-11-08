@@ -11,6 +11,9 @@
 
 .welcome {
   margin: 3%;
+  display: flex;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
 @media (max-width: 991px) {
