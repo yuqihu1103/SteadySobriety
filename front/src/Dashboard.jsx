@@ -4,6 +4,7 @@ import Welcome from "./Welcome";
 import Leaderboard from "./Leaderboard";
 import DrinkingLog from "./DrinkingLog";
 import DrinkingHistory from "./DrinkingHistory";
+import "./Dashboard.css";
 
 function Dashboard({ loggedInUser }) {
   const [numDrinkingLogs, setNumDrinkingLogs] = useState(0);
