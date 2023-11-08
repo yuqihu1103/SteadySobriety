@@ -26,7 +26,6 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   min-height: calc(100vh - 50px - 40px); /* Adjust for navbar and footer */
   margin: 0;
 }
@@ -77,7 +76,6 @@ html {
     0.8
   ); /* Optional: Adds a white, semi-transparent background to the text */
   border-radius: 10px; /* Optional: Rounds the corners of the text block */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow around the text block */
 }
 
 /* Footer styling, placing contact info at the bottom */
