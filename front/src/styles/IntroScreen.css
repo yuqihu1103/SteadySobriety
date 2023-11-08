@@ -1,18 +1,10 @@
-/* Base styling */
-body,
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 /* Content wrapper styling */
 .content-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around; /* This will space out the image and text more evenly */
   margin: 0 auto; /* Centers the content wrapper */
-  max-width: 1200px; /* Maximum width of the content wrapper */
+  margin-bottom: 1.5%;
 }
 
 /* Main container with a background image */
@@ -21,10 +13,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/wave_background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #fff;
   min-height: calc(100vh - 50px - 40px); /* Adjust for navbar and footer */
   margin: 0;
@@ -48,15 +36,19 @@ html {
 
 /* Content styling */
 .intro-content {
+  margin-left: 20px;
+  margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  grid-template-rows: auto 1fr;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
 /* Main photo card styling */
 .main-photo {
-  width: 40%; /* Adjust the width as needed */
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
   border-radius: 10px; /* Rounds the corners of the image */
@@ -66,49 +58,17 @@ html {
 /* Text content styling */
 .intro-text {
   color: black;
-  width: 50%; /* Adjust the width as needed, reduced to 50% to avoid squeezing */
-  margin-left: 20px; /* Adds some space between the image and text */
   padding: 20px; /* Optional: Adds padding inside the text block */
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Optional: Adds a white, semi-transparent background to the text */
-  border-radius: 10px; /* Optional: Rounds the corners of the text block */
+  border-radius: 10px;
+  font-size: larger;
+  flex: 1;
 }
 
 /* Footer styling, placing contact info at the bottom */
-.intro-footer {
+.contact {
   color: #fff;
-  background: black;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 10px 0;
   text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .content-overlay {
-    width: 95%;
-  }
-
-  .intro-content {
-    flex-direction: column;
-  }
-
-  .main-photo,
-  .intro-text {
-    max-width: 100%;
-  }
-
-  .intro-heading {
-    font-size: 2rem;
-  }
-
-  .intro-footer {
-    position: relative;
-  }
+  z-index: 2;
 }
