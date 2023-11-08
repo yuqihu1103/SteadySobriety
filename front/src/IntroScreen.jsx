@@ -4,17 +4,19 @@ import "./IntroScreen.css";
 const IntroScreen = () => {
   return (
     <div className="intro-screen">
-      <header className="intro-header">
-        <h1>Welcome to Steady Sobriety</h1>
+      <h1 className="intro-heading">Welcome to Steady Sobriety</h1>
+      <div className="content-wrapper">
         <img src="quitDrinking.jpg" alt="Main" className="main-photo" />
-        <p className="intro-text">
-          SteadySobriety is a web application designed to provide essential
-          tools and support for individuals seeking to overcome alcohol abuse
-          and maintain lasting sobriety. This platform offers a range of
-          features that help users on their journey towards a healthier,
-          alcohol-free life.
-        </p>
-      </header>
+        <div className="intro-content">
+          <p className="intro-text">
+            SteadySobriety is a web application designed to provide essential
+            tools and support for individuals seeking to overcome alcohol abuse
+            and maintain lasting sobriety. This platform offers a range of
+            features that help users on their journey towards a healthier,
+            alcohol-free life.
+          </p>
+        </div>
+      </div>
       <footer className="intro-footer">
         <p>Contact the Authors:</p>
         <p>Email: hu,yuqi@northeastern.edu</p>

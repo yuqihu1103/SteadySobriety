@@ -1,27 +1,95 @@
+/* Base styling */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container with a background image */
 .intro-screen {
-  background: url("/path-to-background.jpg") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/background.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  min-height: calc(100vh - 50px - 40px); /* Adjust for navbar and footer */
+  margin: 0;
 }
 
-.intro-nav {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  /* Add more styles for your nav links here */
-}
-
-.intro-header {
-  text-align: center;
-  padding: 50px;
-}
-
-.main-photo {
+/* Semi-transparent overlay for text content */
+.content-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
   width: 80%;
+  max-width: 800px;
+}
+
+/* Header styling */
+.intro-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+/* Content styling */
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Image styling within the content */
+.main-photo {
+  max-width: 40%;
   height: auto;
 }
 
+/* Text content styling */
 .intro-text {
-  font-size: 18px;
-  max-width: 600px;
-  margin: auto;
-  /* Add more styling for the paragraph text here */
+  color: black;
+  max-width: 60%;
+  font-size: 1rem;
+}
+
+/* Footer styling, placing contact info at the bottom */
+.intro-footer {
+  color: #fff;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-overlay {
+    width: 95%;
+  }
+
+  .intro-content {
+    flex-direction: column;
+  }
+
+  .main-photo,
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .intro-heading {
+    font-size: 2rem;
+  }
+
+  .intro-footer {
+    position: relative;
+  }
 }
