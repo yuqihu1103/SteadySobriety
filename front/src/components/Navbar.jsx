@@ -25,46 +25,55 @@ function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
   };
 
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="#" onClick={showResources}>
-            Resources
-          </a>
-        </li>
-        {loggedInUser ? (
-          <>
-            <li>
-              <a href="#" onClick={showDashboard}>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={handleLogout}>
-                Logout
-              </a>
-            </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <a href="#" onClick={showIntro}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={showLogin}>
-                Login
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={showRegister}>
-                Register
-              </a>
-            </li>
-          </>
-        )}
-      </ul>
+    <nav className="navbar">
+      <div className="container-fluid">
+        <img
+          className="navbar-brand"
+          src="/steady-sobriety-favicon.png"
+          alt="Logo of Steady Sobriety"
+          width="40"
+          height="40"
+        />
+        <ul>
+          <li className="nav-item">
+            <a href="#" onClick={showResources}>
+              Resources
+            </a>
+          </li>
+          {loggedInUser ? (
+            <>
+              <li className="nav-item">
+                <a href="#" onClick={showDashboard}>
+                  Dashboard
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" onClick={handleLogout}>
+                  Logout
+                </a>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="nav-item">
+                <a href="#" onClick={showIntro}>
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" onClick={showLogin}>
+                  Login
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" onClick={showRegister}>
+                  Register
+                </a>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
     </nav>
   );
 }
