@@ -49,8 +49,10 @@ const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
   };
 
   return (
-    <div>
-      <button onClick={handleLogDay}>Log Drinking Day</button>
+    <div className="drinking-log-container">
+      <button className="log-button" onClick={handleLogDay}>
+        Log Drinking Day
+      </button>
       {showDatePicker && (
         <DatePicker
           selected={logDate}
@@ -58,7 +60,11 @@ const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
           inline
         />
       )}
-      {showSaveButton && <button onClick={handleSaveLog}>Save Log</button>}
+      {showSaveButton && (
+        <button className="save-log-button" onClick={handleSaveLog}>
+          Save Log
+        </button>
+      )}
     </div>
   );
 };

@@ -1,9 +1,5 @@
-.drinking-history {
-  /* Add any additional styles you want for the component */
-}
-
 .log-history-scrollable {
-  max-height: 200px; /* Or any other value that fits the design */
+  max-height: 200px;
   overflow-y: auto;
   border: 1px solid #ccc;
   border-radius: 4px;
