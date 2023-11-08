@@ -50,9 +50,9 @@ function Login({ setLoggedInUser }) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="credentialType">Login with:</label>
           <select
