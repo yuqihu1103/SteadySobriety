@@ -8,7 +8,7 @@ const IntroScreen = () => {
       <div className="content-wrapper">
         {" "}
         {/* This should be the flex container */}
-        <img src="quitDrinking.jpg" alt="Main" className="main-photo" />
+        <img src="main_photo.jpg" alt="Main" className="main-photo" />
         <p className="intro-text">
           SteadySobriety is a web application designed to provide essential
           tools and support for individuals seeking to overcome alcohol abuse

@@ -6,12 +6,13 @@ html {
   padding: 0;
 }
 
-/* Make sure content-wrapper is the flex container */
+/* Content wrapper styling */
 .content-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjust this as needed */
-  width: 100%; /* Take up full width of the parent container */
+  justify-content: space-around; /* This will space out the image and text more evenly */
+  margin: 0 auto; /* Centers the content wrapper */
+  max-width: 1200px; /* Maximum width of the content wrapper */
 }
 
 /* Main container with a background image */
@@ -20,7 +21,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/background.jpg");
+  background-image: url("/wave_background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,18 +55,29 @@ html {
   width: 100%;
 }
 
-/* Image styling within the content */
+/* Main photo card styling */
 .main-photo {
   width: 40%; /* Adjust the width as needed */
   height: auto;
-  /* You can add margin-right here if needed */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
+  border-radius: 10px; /* Rounds the corners of the image */
+  overflow: hidden; /* Ensures the image corners are rounded */
 }
 
 /* Text content styling */
 .intro-text {
   color: black;
-  width: 60%; /* Adjust the width as needed */
-  /* Add padding or margin as needed for spacing */
+  width: 50%; /* Adjust the width as needed, reduced to 50% to avoid squeezing */
+  margin-left: 20px; /* Adds some space between the image and text */
+  padding: 20px; /* Optional: Adds padding inside the text block */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: Adds a white, semi-transparent background to the text */
+  border-radius: 10px; /* Optional: Rounds the corners of the text block */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow around the text block */
 }
 
 /* Footer styling, placing contact info at the bottom */
