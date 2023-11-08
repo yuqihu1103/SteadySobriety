@@ -3,7 +3,7 @@
 /* Limit the width and height and add scrolling */
 .leaderboard {
   text-align: center;
-  max-width: 600px;
+  max-width: 45vw;
   margin: 0 auto;
   overflow: auto;
   max-height: 480px;
@@ -85,4 +85,10 @@
   overflow-y: auto; /* Add vertical scrollbar if needed */
   border-radius: 6%;
   margin-bottom: 3%;
+}
+
+@media (max-width: 991px) {
+  .leaderboard {
+    max-width: 90vw;
+  }
 }

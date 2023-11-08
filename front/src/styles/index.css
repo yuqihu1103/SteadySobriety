@@ -48,7 +48,7 @@ button:focus-visible {
 }
 
 body {
-  background: url("/general_background.jpg") no-repeat center center fixed;
+  background: url("/general_background.jpg") center center fixed;
   background-size: cover; /* This ensures the background image covers the entire viewport */
   background-color: #242424; /* Fallback background color */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

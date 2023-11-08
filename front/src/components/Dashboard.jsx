@@ -10,17 +10,25 @@ function Dashboard({ loggedInUser }) {
   const [numDrinkingLogs, setNumDrinkingLogs] = useState(0);
   return (
     <div>
-      <Welcome loggedInUser={loggedInUser} />
-      <Leaderboard />
-      <DrinkingLog
-        loggedInUser={loggedInUser}
-        setNumDrinkingLogs={setNumDrinkingLogs}
-        numDrinkingLogs={numDrinkingLogs}
-      />
-      <DrinkingHistory
-        loggedInUser={loggedInUser}
-        numDrinkingLogs={numDrinkingLogs}
-      />
+      <div className="welcome">
+        <Welcome loggedInUser={loggedInUser} />
+      </div>
+      <div className="row">
+        <div className="col-lg-6 col-12 drinking-info">
+          <DrinkingHistory
+            loggedInUser={loggedInUser}
+            numDrinkingLogs={numDrinkingLogs}
+          />
+          <DrinkingLog
+            loggedInUser={loggedInUser}
+            setNumDrinkingLogs={setNumDrinkingLogs}
+            numDrinkingLogs={numDrinkingLogs}
+          />
+        </div>
+        <div className="col-lg-6 col-12">
+          <Leaderboard />
+        </div>
+      </div>
     </div>
   );
 }
