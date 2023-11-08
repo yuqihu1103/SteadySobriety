@@ -7,7 +7,10 @@
   "scripts": {
     "start": "node ./node_modules/nodemon/bin/nodemon.js ./bin/www.js",
     "build": "npm install && cd front && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "initUsers": "mongoimport -d SteadySobriety -c users --jsonArray db/mock_data/mock_users.json",
+    "initLogs": "mongoimport -d SteadySobriety -c sober_logs --jsonArray db/mock_data/mock_logs.json",
+    "initDB": "npm run initUsers && npm run initLogs"
   },
   "repository": {
     "type": "git",
