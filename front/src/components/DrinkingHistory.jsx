@@ -35,13 +35,15 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   }, [loggedInUser, numDrinkingLogs]);
 
   return (
-    <div>
+    <div className="drinking-history">
       <h2>Drinking History</h2>
-      <ul>
+      <div className="log-history-scrollable">
         {logHistory.map((log, index) => (
-          <li key={index}>{new Date(log.date).toLocaleDateString()}</li>
+          <div className="log-entry" key={index}>
+            {new Date(log.date).toLocaleDateString()}
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
