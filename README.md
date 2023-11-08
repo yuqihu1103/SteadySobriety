@@ -10,10 +10,7 @@
 
 SteadySobriety is a web application designed to provide essential tools and support for individuals seeking to overcome alcohol abuse
 and maintain lasting sobriety. This platform offers a range of features that help users on their journey towards a healthier,
-alcohol-free life. After registering and logging in, user can log the time of their last drink. User can keep track of their current
-and longest sobriety streak and compare with other users on the scoreboard. We'll also add a discussion forum in the future.
-By combining user-friendly interfaces, data tracking, community engagement, and motivational elements, SteadySobriety strives to be a
-valuable resource in the battle against alcohol addiction.
+alcohol-free life. After registering and logging in, user can log the time of their last drink and view their drinking history. User can keep track of their sobriety streak and compare with other users on the scoreboard. We'll also add a discussion forum and improve on desgin, accessibility and usability in the future.
 
 ## Project Demo and Presentation
 
@@ -23,7 +20,7 @@ valuable resource in the battle against alcohol addiction.
 
 **Overview(gif)**
 
-## Instructions to Build and Use
+## Instructions to Build
 
 ### Installation
 
