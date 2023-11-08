@@ -49,8 +49,9 @@ button:focus-visible {
 
 body {
   background: url("/general_background.jpg") center center fixed;
-  background-size: cover; /* This ensures the background image covers the entire viewport */
+  background-size: contain; /* This ensures the background image covers the entire viewport */
   background-color: #242424; /* Fallback background color */
+  background-repeat: repeat;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -61,6 +62,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-y: auto;
+}
+
+html {
+  background: url("/general_background.jpg") center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 @media (prefers-color-scheme: light) {

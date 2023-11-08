@@ -9,7 +9,7 @@ import "../styles/Dashboard.css";
 function Dashboard({ loggedInUser }) {
   const [numDrinkingLogs, setNumDrinkingLogs] = useState(0);
   return (
-    <div>
+    <div className="dashboard">
       <div className="welcome">
         <Welcome loggedInUser={loggedInUser} />
       </div>
