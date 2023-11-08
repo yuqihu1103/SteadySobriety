@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Leaderboard.css";
 
 function Leaderboard() {
   const [leaderboardData, setLeaderboardData] = useState([]);
@@ -23,30 +24,34 @@ function Leaderboard() {
   }, []); // The empty dependency array ensures this effect runs once on component mount
 
   return (
-    <div>
-      <h2>Leaderboard</h2>
-      <div>
+    <div className="container mt-4 leaderboard">
+      <h2 className="mb-3">Leaderboard</h2>
+      <div className="d-flex justify-content-between mb-3">
         <span>Last Updated: {lastUpdated}</span>
-        <button onClick={fetchLeaderboardData}>Refresh</button>
+        <button className="btn btn-primary" onClick={fetchLeaderboardData}>
+          Refresh
+        </button>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Username</th>
-            <th>Streak</th>
-          </tr>
-        </thead>
-        <tbody>
-          {leaderboardData.map((entry, index) => (
-            <tr key={entry.username}>
-              <td>{index + 1}</td>
-              <td>{entry.username}</td>
-              <td>{entry.streak} days</td>
+      <div className="table-responsive">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Username</th>
+              <th>Streak</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {leaderboardData.map((entry, index) => (
+              <tr key={entry.username}>
+                <td>{index + 1}</td>
+                <td>{entry.username}</td>
+                <td>{entry.streak} days</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
