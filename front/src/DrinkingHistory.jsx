@@ -18,7 +18,7 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
 
           if (response.ok) {
             const sortedHistory = data.userLogHistory.sort(
-              (a, b) => new Date(a.date) - new Date(b.date)
+              (b, a) => new Date(a.date) - new Date(b.date)
             );
             setLogHistory(sortedHistory);
           } else {
