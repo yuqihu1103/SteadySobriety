@@ -11,7 +11,10 @@ function Dashboard({ loggedInUser }) {
   return (
     <div className="dashboard">
       <div className="welcome">
-        <Welcome loggedInUser={loggedInUser} />
+        <Welcome
+          loggedInUser={loggedInUser}
+          numDrinkingLogs={numDrinkingLogs}
+        />
       </div>
       <div className="row">
         <div className="col-lg-6 col-12 drinking-info">

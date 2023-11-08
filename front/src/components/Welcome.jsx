@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Welcome.css";
 
-const Welcome = ({ loggedInUser }) => {
+const Welcome = ({ loggedInUser, numDrinkingLogs }) => {
   const [userMessage, setUserMessage] = useState("");
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Welcome = ({ loggedInUser }) => {
     };
 
     fetchStreak();
-  }, [loggedInUser]); // Dependency array ensures this effect runs when loggedInUser changes
+  }, [loggedInUser, numDrinkingLogs]); // Dependency array ensures this effect runs when loggedInUser changes
 
   return (
     <div className="welcome-container">
@@ -49,6 +49,7 @@ const Welcome = ({ loggedInUser }) => {
 
 Welcome.propTypes = {
   loggedInUser: PropTypes.string,
+  numDrinkingLogs: PropTypes.number,
 };
 
 export default Welcome;
