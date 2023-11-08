@@ -9,11 +9,14 @@ const SoberLogModel = {
     return soberLogsCollection.insertOne({ username, date });
   },
 
-  // READ a user's sober logs
+  // READ a user's sober logs sorted by date (latest to oldest)
   async readSoberLogs(username) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
-    return soberLogsCollection.find({ username }).toArray();
+    return soberLogsCollection
+      .find({ username })
+      .sort({ date: -1 }) // Sort by date in descending order (latest to oldest)
+      .toArray();
   },
 
   // UPDATE a sober log (assuming by date)
