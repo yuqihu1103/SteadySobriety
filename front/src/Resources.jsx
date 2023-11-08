@@ -33,7 +33,14 @@ const Resources = () => {
               <img src={resource.image} alt={resource.title} />
             </div>
             <div className="resource-content">
-              <h3 className="resource-title">{resource.title}</h3>
+              <a
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resource-title-link"
+              >
+                <h3 className="resource-title">{resource.title}</h3>
+              </a>
               <p className="resource-description">{resource.alt}</p>
             </div>
           </div>
