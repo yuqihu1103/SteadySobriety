@@ -13,7 +13,7 @@ const IntroScreen = () => {
         <div className="row intro-content">
           <div className="col-lg-6 col-12">
             <img
-              src="main_photo.jpg"
+              src="/main_photo.jpg"
               alt="Main photo kick alcohol away"
               className="main-photo img-fluid"
             />
