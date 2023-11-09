@@ -20,6 +20,9 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 **Overview(gif)**
 
+![overview](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/14468840-d388-463c-9cbf-0826d3bd8d76)
+
+
 ## Instructions to Build
 
 ### Installation
