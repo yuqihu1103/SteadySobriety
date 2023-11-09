@@ -14,9 +14,9 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 ## Project Demo and Presentation
 
-**Project Demo Video:** [3-min Demo]()
+**Project Demo Video:** [3-min Demo](https://youtu.be/a0rUKtjYNrE)
 
-**Project Presentation and Slides:** [2-min Presentation]() | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+**Project Presentation and Slides:** [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
 
 **Overview(gif)**
 
@@ -25,6 +25,7 @@ alcohol-free life. After registering and logging in, user can log the time of th
 ### Installation
 
 Clone this repository
+
 ```
 https://github.com/yuqihu1103/SteadySobriety.git
 ```
@@ -32,6 +33,7 @@ https://github.com/yuqihu1103/SteadySobriety.git
 Change your current working directory to the project directory.
 
 All the following commands assumes you are in the project root directory.
+
 ```
 cd path/to/the/repo/SteadySobriety
 ```
@@ -39,29 +41,32 @@ cd path/to/the/repo/SteadySobriety
 Run the following command to install dependencies for both frontend and backend and build the frontend.
 
 Same as running `npm install && cd front && npm install && npm run build`.
+
 ```
 npm run build
 ```
 
 Start the backend server, which will be running on http://localhost:3000.
+
 ```
 npm start
 ```
 
 ### Database
 
-To use this application locally, you need to have a Mongo server running on localhost:27017, or configured in the MONGOMONGODB_URI environment variable. 
+To use this application locally, you need to have a Mongo server running on localhost:27017, or configured in the MONGOMONGODB_URI environment variable.
 
 Run the following command to initializing the database. It will create a SteadySobriety databases with collections users and sober_logs, each populated with 1000 synthetic records.
+
 ```
 npm run initDB
 ```
 
 You can also run our script to generate new mock data before initializing database
+
 ```
 node db/mock_data/mock_data.js
 ```
-
 
 ## Project Design
 
