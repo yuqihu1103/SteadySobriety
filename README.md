@@ -58,6 +58,8 @@ To use this application locally, you need to have a Mongo server running on loca
 
 Run the following command to initializing the database. It will create a SteadySobriety databases with collections users and sober_logs, each populated with 1000 synthetic records.
 
+Note that this will overwrite existing data, if there is any.
+
 ```
 npm run initDB
 ```
@@ -82,7 +84,9 @@ Design documents can be found in the [docs](docs) folder, including:
 
 **Backend**: Node + Express, MongoDB
 
-**Frontend**: React, Vite
+**Frontend**: React, Vite, CSS,  Bootstrap
+
+**Deployment**: Render, MongoDB Altas
 
 ## License
 
