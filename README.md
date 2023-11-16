@@ -85,9 +85,9 @@ Design documents can be found in the [docs](docs) folder, including:
 
 ## Technologies
 
-**Backend**: Node + Express, MongoDB
+**Backend**: Node + Express, MongoDB, passport.js
 
-**Frontend**: React, Vite, CSS,  Bootstrap
+**Frontend**: React, Vite, CSS, Bootstrap
 
 **Deployment**: Render, MongoDB Altas
 
