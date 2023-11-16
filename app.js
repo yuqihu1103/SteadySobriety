@@ -76,19 +76,26 @@ passport.deserializeUser(async (username, done) => {
   }
 });
 
+// Create a middleware function to check if the user is authenticated
+const isAuthenticated = (req, res, next) => {
+  // Passport adds the 'user' object to the request if the user is authenticated
+  if (req.isAuthenticated()) {
+    return next(); // User is authenticated, proceed to the next middleware or route handler
+  }
+  // If not authenticated, redirect to login or send an error response
+  res
+    .status(401)
+    .json({ error: "Unauthorized: Please log in to access this resource" });
+};
+
 // Use the routes
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.get("/logout", logoutRoute);
-app.post("/sober-log", createSoberLogRoute);
-app.get("/sober-log/:username", readSoberLogRoute);
-app.get("/streak/:username", streakRoute);
-app.get("/leaderboard", leaderboardRoute);
-
-// Test route
-app.get("/test", (req, res) => {
-  res.status(200).json({ message: "Test success!" });
-});
+app.post("/sober-log", isAuthenticated, createSoberLogRoute);
+app.get("/sober-log/:username", isAuthenticated, readSoberLogRoute);
+app.get("/streak/:username", isAuthenticated, streakRoute);
+app.get("/leaderboard", isAuthenticated, leaderboardRoute);
 
 connectToDatabase();
 export default app;
