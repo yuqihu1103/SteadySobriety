@@ -40,8 +40,7 @@ function Login({ setLoggedInUser }) {
       if (response.status === 200) {
         console.log("Login successful:", data);
         setLoggedInUser(data.username);
-        localStorage.setItem("loggedInUser", JSON.stringify(data.username));
-        console.log(`loggedin user set to ${data.username}`);
+        console.log(`loggedin user is ${data.username}`);
       } else {
         console.error("Login error:", data.error);
         setLoginError(data.error);

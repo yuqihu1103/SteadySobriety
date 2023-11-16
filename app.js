@@ -96,6 +96,15 @@ app.post("/sober-log", isAuthenticated, createSoberLogRoute);
 app.get("/sober-log/:username", isAuthenticated, readSoberLogRoute);
 app.get("/streak/:username", isAuthenticated, streakRoute);
 app.get("/leaderboard", isAuthenticated, leaderboardRoute);
+app.get("/current-user", (req, res) => {
+  if (req.isAuthenticated()) {
+    // If the user is authenticated, return the username
+    res.status(200).json({ username: req.user.username });
+  } else {
+    // If not authenticated, return an error or an appropriate response
+    res.status(401).json({ error: "User not authenticated" });
+  }
+});
 
 connectToDatabase();
 export default app;
