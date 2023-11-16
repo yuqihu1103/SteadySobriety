@@ -38,11 +38,15 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
     <div className="drinking-history">
       <h2>Drinking History</h2>
       <div className="log-history-scrollable">
-        {logHistory.map((log, index) => (
-          <div className="log-entry" key={index}>
-            {new Date(log.date).toLocaleDateString()}
-          </div>
-        ))}
+        {logHistory.length === 0 ? (
+          <p className="log-entry">Create your first log!</p>
+        ) : (
+          logHistory.map((log, index) => (
+            <div className="log-entry" key={index}>
+              {new Date(log.date).toLocaleDateString()}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

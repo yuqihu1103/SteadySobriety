@@ -22,9 +22,10 @@ const IntroScreen = () => {
             <p className="intro-text">
               SteadySobriety is a web application designed to provide essential
               tools and support for individuals seeking to overcome alcohol
-              abuse and maintain lasting sobriety. This platform offers a range
-              of features that help users on their journey towards a healthier,
-              alcohol-free life.
+              abuse and maintain lasting sobriety. After registering or logging
+              in with existing credential, you can log you drinking days, view
+              drinking history and current sober streak. Stay sober longer for a
+              chance to be on the leaderboard!
             </p>
           </div>
         </div>

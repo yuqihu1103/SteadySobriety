@@ -33,8 +33,6 @@ router.post("/register", async (req, res) => {
       password: hashedPassword,
     };
 
-    console.log(user);
-
     // Create the user in the database
     const userId = await UserModel.createUser(user);
 
