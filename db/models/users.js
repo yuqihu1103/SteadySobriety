@@ -47,9 +47,9 @@ const UserModel = {
     return result.deletedCount;
   },
 
-  async verifyPassword(email, password) {
+  async verifyPassword(username, password) {
     const db = getDatabase();
-    const user = await db.collection("users").findOne({ email });
+    const user = await db.collection("users").findOne({ username });
 
     if (!user) {
       return false; // User not found

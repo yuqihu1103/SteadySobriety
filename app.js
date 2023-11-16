@@ -1,9 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
+import session from "express-session";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import { connectToDatabase } from "./db/db.js";
+import passport from "passport";
+import LocalStrategy from "passport-local";
+import { getDatabase, connectToDatabase } from "./db/db.js";
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
 import logoutRoute from "./routes/logout.js";
@@ -11,6 +14,7 @@ import createSoberLogRoute from "./routes/create_log.js";
 import readSoberLogRoute from "./routes/read_logs.js";
 import streakRoute from "./routes/streak.js";
 import leaderboardRoute from "./routes/leadboard.js";
+import UserModel from "./db/models/users.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -19,28 +23,69 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "front", "dist")));
 
-// Middleware to check if the user is authenticated
-function isAuthenticated(req, res, next) {
-  if (req.session && req.session.username) {
-    return next();
-  }
-  res.redirect("/login");
-}
-
 // Middleware for parsing JSON request bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Initialize Passport and sessions
+app.use(
+  session({
+    secret: "your_secret_key",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Passport configuration
+passport.use(
+  "local",
+  new LocalStrategy(async (username, password, done) => {
+    try {
+      const user = await UserModel.getUserByUsername(username);
+
+      if (!user) {
+        return done(null, false, { message: "User not found" });
+      }
+
+      const passwordMatch = await UserModel.verifyPassword(username, password);
+
+      if (!passwordMatch) {
+        return done(null, false, { message: "Incorrect password" });
+      }
+
+      return done(null, user);
+    } catch (err) {
+      return done(err);
+    }
+  })
+);
+
+passport.serializeUser((user, done) => {
+  done(null, user.username); // Assuming '_id' is the user's unique identifier
+});
+
+passport.deserializeUser(async (username, done) => {
+  const db = getDatabase();
+  try {
+    const user = await db.collection("users").findOne({ username: username });
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
+});
+
 // Use the routes
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
-app.get("/login", logoutRoute);
+app.get("/logout", logoutRoute);
 app.post("/sober-log", createSoberLogRoute);
 app.get("/sober-log/:username", readSoberLogRoute);
 app.get("/streak/:username", streakRoute);
 app.get("/leaderboard", leaderboardRoute);
 
-//test route
+// Test route
 app.get("/test", (req, res) => {
   res.status(200).json({ message: "Test success!" });
 });

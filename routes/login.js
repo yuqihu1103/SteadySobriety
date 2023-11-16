@@ -1,5 +1,6 @@
 // Import required modules and User model
 import express from "express";
+import passport from "passport";
 import UserModel from "../db/models/users.js";
 
 // Create an Express router
@@ -22,15 +23,25 @@ router.post("/login", async (req, res) => {
     return res.status(401).json({ error: "User not found" });
   }
 
-  const passwordMatch = await UserModel.verifyPassword(user.email, password);
+  req.body.username = user.username;
+  req.body.password = password;
 
-  if (passwordMatch) {
-    res
-      .status(200)
-      .json({ username: user.username, message: "Login successful" });
-  } else {
-    res.status(401).json({ error: "Invalid password" });
-  }
+  passport.authenticate("local", (err, user, info) => {
+    if (err) {
+      return res.status(500).json({ error: "Internal server error" });
+    }
+    if (!user) {
+      return res.status(401).json({ error: info.message });
+    }
+    req.login(user, (err) => {
+      if (err) {
+        return res.status(500).json({ error: "Login failed" });
+      }
+      return res
+        .status(200)
+        .json({ username: user.username, message: "Login successful" });
+    });
+  })(req, res);
 });
 
 export default router;
