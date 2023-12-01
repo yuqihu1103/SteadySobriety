@@ -83,6 +83,26 @@ Design documents can be found in the [docs](docs) folder, including:
 
 <img width="523" alt="design mockup overview" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/e11567d2-612c-4429-9078-e846fb4e50d8">
 
+
+## More Design, Accessbility and Usability
+
+Documents about the usablity study can be found in the [docs](docs) folder, including:
+
+1. Consent Form
+2. Usability Study Question
+3. Usability Study Report
+
+More design can be found in the [docs](docs) folder, including:
+
+1. Layout/Hierarchy
+2. Typography
+3. Color
+
+Documents about accessibility can be found in the [docs](docs) folder, including:
+
+1. Using the application with only keyboard
+2. Accessibility test result with axe or lighthouse
+
 ## Technologies
 
 **Backend**: Node + Express, MongoDB, passport.js
