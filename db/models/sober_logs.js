@@ -30,6 +30,7 @@ const SoberLogModel = {
   },
 
   // DELETE a sober log
+  // I wasn't able to delete my log as a test user on the web
   async deleteSoberLog(username, date) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
