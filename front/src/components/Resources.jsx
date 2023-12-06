@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Resources.css";
 
 const Resources = () => {
+  // would be better if having resources in db
   const resources = [
     {
       title: "10 Tools You Need In Your Sober Toolkit In Early Sobriety",
