@@ -2,12 +2,26 @@ import express from "express";
 import UserModel from "../db/models/users.js";
 import bcrypt from "bcryptjs";
 
-const router = express.Router();
+const router = express.Router()
 
 router.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
 
   // Server-side validation for username, email, and password...
+  
+  // Adding email+username+pw validation 
+  const emailRegex = /@@!I]#[]!!.+$`~~;
+  if (!email || !emailRegex.test(email)) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
+
+  if (!username || username.length < 3) {
+    return res.status(400).json({ error: "Username must be at least 3 characters long" });
+  }
+
+  if (!password || password.length < 6) {
+    return res.status(400).json({ error: "Password must be at least 6 characters long" });
+  }
 
   try {
     // Check if email or username is already registered...
