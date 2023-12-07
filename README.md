@@ -22,7 +22,6 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 ![overview](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/14468840-d388-463c-9cbf-0826d3bd8d76)
 
-
 ## Instructions to Build
 
 ### Installation
@@ -83,14 +82,13 @@ Design documents can be found in the [docs](docs) folder, including:
 
 <img width="523" alt="design mockup overview" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/e11567d2-612c-4429-9078-e846fb4e50d8">
 
-
 ## More Design, Accessibility and Usability
 
 Learn more about the designm accessibility, and usability of the Steady Sobriety application.
 
 ### Usability Study
 
-1. Consent Form
+1. [Consent Form](docs/usability_study/usability_study_informed_consent_document.pdf)
 2. Usability Study Question
 3. Usability Study Report
 
@@ -99,7 +97,7 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 1. Layout/Hierarchy
 2. Typography
 3. Color
-   
+
 ### Accessibility
 
 1. Demonstration of using the application with only keyboard
