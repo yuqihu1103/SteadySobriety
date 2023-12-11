@@ -12,6 +12,7 @@ import loginRoute from "./routes/login.js";
 import logoutRoute from "./routes/logout.js";
 import createSoberLogRoute from "./routes/create_log.js";
 import readSoberLogRoute from "./routes/read_logs.js";
+import deleteSoberLogRoute from "./routes/delete_log.js";
 import streakRoute from "./routes/streak.js";
 import leaderboardRoute from "./routes/leadboard.js";
 import UserModel from "./db/models/users.js";
@@ -89,6 +90,7 @@ const isAuthenticated = (req, res, next) => {
 };
 
 // Use the routes
+app.use(deleteSoberLogRoute);
 app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.get("/logout", logoutRoute);

@@ -6,33 +6,56 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   const [logHistory, setLogHistory] = useState([]);
 
   useEffect(() => {
-    const fetchLogHistory = async () => {
-      if (loggedInUser) {
-        try {
-          const response = await fetch(`/sober-log/${loggedInUser}`, {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-          const data = await response.json();
-
-          if (response.ok) {
-            const sortedHistory = data.userLogHistory.sort(
-              (b, a) => new Date(a.date) - new Date(b.date)
-            );
-            setLogHistory(sortedHistory);
-          } else {
-            throw new Error(data.error || "Failed to fetch log history.");
-          }
-        } catch (error) {
-          console.error("Error fetching log history:", error);
-        }
-      }
-    };
-
     fetchLogHistory();
   }, [loggedInUser, numDrinkingLogs]);
+
+  const fetchLogHistory = async () => {
+    if (loggedInUser) {
+      try {
+        const response = await fetch(`/sober-log/${loggedInUser}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+
+        if (response.ok) {
+          const sortedHistory = data.userLogHistory.sort(
+            (b, a) => new Date(a.date) - new Date(b.date)
+          );
+          setLogHistory(sortedHistory);
+        } else {
+          throw new Error(data.error || "Failed to fetch log history.");
+        }
+      } catch (error) {
+        console.error("Error fetching log history:", error);
+      }
+    }
+  };
+
+  const deleteLog = async (date) => {
+    if (window.confirm("Are you sure you want to delete this log?")) {
+      try {
+        const response = await fetch(`/sober-log/${loggedInUser}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ date }),
+        });
+        if (response.ok) {
+          // Refresh the log history to reflect the deletion
+          fetchLogHistory();
+        } else {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to delete the log.");
+        }
+      } catch (error) {
+        console.error("Error deleting log:", error);
+      }
+    }
+  };
 
   return (
     <div className="drinking-history">
@@ -44,6 +67,12 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
           logHistory.map((log, index) => (
             <div className="log-entry" key={index}>
               {new Date(log.date).toLocaleDateString()}
+              <button
+                className="delete-button"
+                onClick={() => deleteLog(log.date)}
+              >
+                Delete
+              </button>
             </div>
           ))
         )}
@@ -53,7 +82,7 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
 };
 
 DrinkingHistory.propTypes = {
-  loggedInUser: PropTypes.string.isRequired, // assuming loggedInUser is a string identifier
+  loggedInUser: PropTypes.string.isRequired,
   numDrinkingLogs: PropTypes.number.isRequired,
 };
 
