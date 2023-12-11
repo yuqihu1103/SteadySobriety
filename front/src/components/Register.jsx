@@ -73,6 +73,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             minLength={3}
+            placeholder="Username"
           />
         </div>
         <div>
@@ -84,6 +85,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+            placeholder="Email"
           />
         </div>
         <div>
@@ -95,6 +97,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             minLength={6}
+            placeholder="Password"
           />
           {/* Conditionally render the password error message */}
           {passwordError && (
