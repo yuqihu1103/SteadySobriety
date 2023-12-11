@@ -4,12 +4,14 @@ import "../styles/Leaderboard.css";
 function Leaderboard() {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [currentRank, setCurrentRank] = useState(null);
 
   const fetchLeaderboardData = () => {
     fetch("/leaderboard")
       .then((response) => response.json())
       .then((data) => {
-        setLeaderboardData(data);
+        setLeaderboardData(data.top50);
+        setCurrentRank(data.currentUserRank);
         // Set the last updated time
         setLastUpdated(new Date().toLocaleString());
       })
@@ -26,6 +28,9 @@ function Leaderboard() {
   return (
     <div className="container mt-4 leaderboard">
       <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
+      <div className="currentRank">
+        <p>Your current rank: {currentRank} </p>
+      </div>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <span className="last-update">Last Updated: {lastUpdated}</span>
         <button
