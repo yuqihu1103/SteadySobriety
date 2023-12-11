@@ -38,7 +38,9 @@
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
+  background-color: beige;
   border-radius: 4px;
+  color: black;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
@@ -60,8 +62,8 @@
 
 /* Style the dropdown */
 .login-form select {
-  background-color: white;
-  color: #333;
+  background-color: rgba(255, 255, 255, 0.664);
+  color: black;
 }
 
 /* Responsive adjustments */

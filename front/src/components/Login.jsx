@@ -73,6 +73,7 @@ function Login({ setLoggedInUser }) {
             name="credential"
             value={formData.credential}
             onChange={handleChange}
+            placeholder={credentialType}
           />
         </div>
         <div>
@@ -82,6 +83,7 @@ function Login({ setLoggedInUser }) {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Password"
           />
         </div>
         <button type="submit">Login</button>
