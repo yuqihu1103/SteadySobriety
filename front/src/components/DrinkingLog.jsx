@@ -40,7 +40,11 @@ const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
         alert("Log created successfully!");
         setNumDrinkingLogs(numDrinkingLogs + 1);
       } else {
-        throw new Error(data.error || "Error logging drinking day.");
+        if (response.status == 400) {
+          alert("That date has already been recorded.");
+        } else {
+          throw new Error(data.error || "Error logging drinking day.");
+        }
       }
     } catch (error) {
       console.error("Error logging drinking day:", error);
