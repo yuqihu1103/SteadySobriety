@@ -12,13 +12,11 @@
 }
 
 /* Style for the log button */
-.log-button {
+.log-label {
   padding: 10px 20px;
   margin-bottom: 15px; /* Space between button and date picker */
   font-size: 16px;
-  cursor: pointer;
-  background-color: #2c3e50; /* Dark blue background */
-  color: white;
+  color: black;
   border: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
