@@ -102,6 +102,7 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 
 1. Demonstration of using the application with only keyboard
 2. Accessibility test result with axe or lighthouse
+   ![Accessibility test results using Lighthouse](front/public/lighthouse.png)
 
 ## Technologies
 
