@@ -34,3 +34,7 @@
 .log-history-scrollable::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.delete-button {
+  color: red;
+}
