@@ -89,14 +89,20 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 ### Usability Study
 
 1. [Consent Form](docs/usability_study/usability_study_informed_consent_document.pdf)
-2. Usability Study Report
+2. [Usability Study Report](docs/usability_study/Usability%20Study%20Report.pdf)
+
+In this report you can find:
+
+- Application scope (users, tasks and data)
+- Experiment prepration and interview notes
+- Summary of the most crucial issues and changes proposed and made
 
 ### User Interface Design
 
 1. [Layout/Hierarchy](docs/design/Design%20of%20Steady%20Sobriety%20-%20Layout_Hierarchy.pdf)
 2. Typography
 3. Color
-![color palette](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/01d98e93-10ee-4114-a9c9-3a8974d29ffe)
+   ![color palette](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/01d98e93-10ee-4114-a9c9-3a8974d29ffe)
 
 ### Accessibility
 
