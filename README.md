@@ -14,11 +14,15 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 ## Project Demo and Presentation
 
-**Project Demo Video:** [3-min Demo](https://youtu.be/a0rUKtjYNrE)
+**Project Demo Video:** Iteration with design, accessibilty, and usability | [Older version with main functionalities](https://youtu.be/a0rUKtjYNrE)
 
-**Project Presentation and Slides:** [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+**Project Presentation and Slides:** 
 
-**Overview(gif)**
+Iteration with design, accessibilty, and usability: 2-min Presentation | Slides
+
+Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+
+**Overview(after iteration)**
 
 ![overview](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/14468840-d388-463c-9cbf-0826d3bd8d76)
 
