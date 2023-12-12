@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import "../styles/Welcome.css";
 
 const Welcome = ({ loggedInUser, numDrinkingLogs }) => {
-  const [userMessage, setUserMessage] = useState("");
+  const [streak, setStreak] = useState(null); // New state for the streak number
 
   useEffect(() => {
-    // Function to fetch the user's streak from the backend
     const fetchStreak = async () => {
       if (loggedInUser) {
         try {
@@ -14,11 +13,11 @@ const Welcome = ({ loggedInUser, numDrinkingLogs }) => {
           const data = await response.json();
 
           if (response.ok) {
-            let message = "Log drinking days to start"; // Default message
             if (data.message !== "No sober logs found.") {
-              message = `You have been sober for ${data.streak} days!`;
+              setStreak(data.streak); // Set the streak number in state
+            } else {
+              setStreak(null); // Reset the streak if no logs are found
             }
-            setUserMessage(message);
           } else {
             throw new Error(data.error || "Error fetching streak.");
           }
@@ -29,7 +28,7 @@ const Welcome = ({ loggedInUser, numDrinkingLogs }) => {
     };
 
     fetchStreak();
-  }, [loggedInUser, numDrinkingLogs]); // Dependency array ensures this effect runs when loggedInUser changes
+  }, [loggedInUser, numDrinkingLogs]);
 
   return (
     <div className="welcome-container">
@@ -38,7 +37,14 @@ const Welcome = ({ loggedInUser, numDrinkingLogs }) => {
           <h1 className="welcome-username">
             Welcome to Steady Sobriety, {loggedInUser}!
           </h1>
-          <h2 className="welcome-message">{userMessage}</h2>
+          {streak !== null ? (
+            <h2 className="welcome-message">
+              You have been sober for{" "}
+              <span className="streak-days">{streak}</span> days!
+            </h2>
+          ) : (
+            <h2 className="welcome-message">Log drinking days to start</h2>
+          )}
         </>
       ) : (
         <h1 className="welcome-username">Welcome to Steady Sobriety!</h1>

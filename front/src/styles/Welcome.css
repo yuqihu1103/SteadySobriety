@@ -11,7 +11,7 @@
 }
 
 .welcome-message {
-  font-size: 24px;
+  font-size: 28px;
   margin: 10px;
 }
 
@@ -19,6 +19,12 @@
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.streak-days {
+  color: red; /* Set the color to red */
+  font-weight: bold;
+  margin: 0 5px; /* Add horizontal margin for spacing */
 }
 
 /* Adjust this margin to control the space between the username and the message */
