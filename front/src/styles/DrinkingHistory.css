@@ -40,18 +40,30 @@
 }
 
 .history-header {
-  display: flex; /* Use flexbox to layout children */
+  display: flex;
   justify-content: center; /* Center children horizontally */
   align-items: center; /* Align children vertically */
-  position: relative; /* Needed to position the info button absolutely */
+  position: relative; /* Needed for absolute positioning of the info button */
+  text-align: center; /* Center the text specifically */
 }
 
+/* If you have a spacer div, it might not be necessary anymore, depending on your layout */
 .header-spacer {
-  flex-grow: 1;
+  flex-grow: 1; /* This will push the button to the right */
+}
+
+.drinking-history {
+  position: relative; /* This makes it the reference for its absolutely positioned children */
+  /* Ensure the .drinking-history container fills the height it needs */
 }
 
 .info-icon-button {
-  position: absolute; /* Position the button absolutely within the header */
-  right: 0; /* Align the button to the right */
-  /* Rest of your styles for the button */
+  position: absolute; /* Position the button absolutely within the .history-header */
+  top: 50%; /* Align the button to the top 50% of the container */
+  right: 0; /* Align the button to the right of the container */
+  transform: translateY(-50%); /* Center the button vertically */
+  background-color: transparent; /* Ensure the button background is transparent */
+  border: none; /* Remove any border */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Indicate that it's clickable */
 }

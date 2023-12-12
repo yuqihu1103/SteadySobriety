@@ -1,11 +1,5 @@
-/* Assuming .drinking-history is the parent container */
 .drinking-history {
   position: relative; /* This makes it the reference for its absolutely positioned children */
-  /* Other styles */
-}
-
-.information-content {
-  color: black;
 }
 
 .information-popover {
@@ -13,20 +7,31 @@
   top: 50px;
   right: 50px;
   width: 300px;
+  z-index: 1000; /* Ensures it's above other content */
+  color: white;
+  background-color: transparent; /* Makes the background transparent */
+}
+
+.information-content {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensures it's above other content */
-  color: white;
-}
-
-/* Content styles */
-.information-popover ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  background-color: white;
+  color: black;
 }
 
 .information-popover li {
   margin-bottom: 10px;
+}
+
+.info-icon-button {
+  background-color: transparent; /* Set the button background to transparent */
+  border: none; /* Remove any border if present */
+}
+
+/* Adjust the size of the image if necessary */
+.info-icon-button img {
+  width: 24px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  background: transparent;
 }
