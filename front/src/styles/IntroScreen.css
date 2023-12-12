@@ -18,38 +18,46 @@
 .intro-text {
   order: -1; /* This will move the text to the left on larger screens */
   color: black;
-  padding: 20px;
+  padding: 10px;
   font-size: larger;
 }
 
 .instruction-text {
   order: -1; /* This will move the text to the left on larger screens */
   color: black;
-  padding: 20px;
+  padding: 10px;
   font-size: larger;
 }
 
 /* Main photo styling */
 .main-photo {
-  /* Your existing styles */
-  order: 1; /* This will move the image to the right on larger screens */
+  order: 1;
 }
 
 /* Main container with a background image */
 .intro-screen {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Adjust to flex-start to align content to the top */
   align-items: center;
   color: #fff;
   min-height: calc(100vh - 50px - 40px); /* Adjust for navbar and footer */
   margin: 0;
+  padding-top: 5%; /* Add padding at the top to push the content down */
 }
 
 /* Header styling */
 .intro-heading {
   font-size: 2.5rem;
   margin-bottom: 1em;
+}
+
+/* Header styling */
+.intro-heading-container {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
 }
 
 /* Content styling */
@@ -83,11 +91,19 @@
   text-decoration: underline;
 }
 
-/* Footer styling, placing contact info at the bottom */
 .contact {
+  position: absolute; /* Keeps the contact info at the bottom */
+  bottom: 0; /* Anchors the contact info to the bottom */
+  left: 0; /* Anchors the contact info to the left */
+  width: 100%; /* Span the full width */
   color: #fff;
-  width: 100%;
   padding: 10px 0;
   text-align: center;
   z-index: 2;
+  background-color: rgba(
+    18,
+    4,
+    44,
+    0.4
+  ); /* Ensure readability over the background image */
 }
