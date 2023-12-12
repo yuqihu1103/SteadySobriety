@@ -5,25 +5,28 @@ function Leaderboard() {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [currentRank, setCurrentRank] = useState(null);
+  const [isLoading, setIsLoading] = useState(true); // New state for loading indication
 
   const fetchLeaderboardData = () => {
+    setIsLoading(true); // Set loading to true when fetching starts
     fetch("/leaderboard")
       .then((response) => response.json())
       .then((data) => {
         setLeaderboardData(data.top50);
         setCurrentRank(data.currentUserRank);
-        // Set the last updated time
         setLastUpdated(new Date().toLocaleString());
       })
       .catch((error) => {
         console.error("Error fetching leaderboard data:", error);
+      })
+      .finally(() => {
+        setIsLoading(false); // Set loading to false after fetching completes
       });
   };
 
   useEffect(() => {
-    // Fetch leaderboard data when the component mounts
     fetchLeaderboardData();
-  }, []); // The empty dependency array ensures this effect runs once on component mount
+  }, []);
 
   return (
     <div className="container mt-4 leaderboard">
@@ -40,35 +43,44 @@ function Leaderboard() {
           Refresh
         </button>
       </div>
-      <div className="table-responsive leader-table">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Username</th>
-              <th>Streak</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leaderboardData.map((entry, index) => (
-              <tr key={entry.username}>
-                <td>{index + 1}</td>
-                <td>
-                  {index === 0
-                    ? "🥇"
-                    : index === 1
-                    ? "🥈"
-                    : index === 2
-                    ? "🥉"
-                    : ""}
-                  {entry.username}
-                </td>
-                <td>{entry.streak} days</td>
+      {isLoading ? ( // Conditional rendering for loading indicator
+        <div className="loading-placeholder">
+          <p>Loading leaderboard data.</p>
+          <p>Please be patient... </p>
+          <img src="leaderboard_loading.jpg" alt="Flash in Zootopia, haha" />
+        </div>
+      ) : (
+        <div className="table-responsive leader-table">
+          {/* Render the leaderboard when not loading */}
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Streak</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {leaderboardData.map((entry, index) => (
+                <tr key={entry.username}>
+                  <td>{index + 1}</td>
+                  <td>
+                    {index === 0
+                      ? "🥇"
+                      : index === 1
+                      ? "🥈"
+                      : index === 2
+                      ? "🥉"
+                      : ""}
+                    {entry.username}
+                  </td>
+                  <td>{entry.streak} days</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }

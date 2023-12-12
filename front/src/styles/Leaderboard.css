@@ -87,6 +87,17 @@
   margin-bottom: 3%;
 }
 
+/* the placeholder while leaderboard is loading */
+.loading-placeholder {
+  font-size: 30px;
+}
+
+/* the placeholder while leaderboard is loading */
+.loading-placeholder img {
+  height: 200px;
+  width: 300px;
+}
+
 @media (max-width: 991px) {
   .leaderboard {
     max-width: 90vw;
