@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import "../styles/Register.css"; // Import the Register component's CSS file
+import "../styles/Register.css";
 import PropTypes from "prop-types";
+import InformationPopover from "./InformationPopover";
+
+const infoContent = (
+  <ul>
+    <li>Enter Username, Email, and Password to Register.</li>
+    <li>Email must be valid.</li>
+    <li>Username cannot less than 3 characters.</li>
+    <li>Password cannot less than 6 characters.</li>
+  </ul>
+);
 
 function Register({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
@@ -63,7 +73,10 @@ function Register({ setActiveComponent, setLoggedInUser }) {
   return (
     <div className="register-container">
       {" "}
-      <h2 className="register-header">Register</h2>{" "}
+      <div className="register-header">
+        <h2 className="register-title">Register</h2>{" "}
+        <InformationPopover>{infoContent}</InformationPopover>
+      </div>
       <p className="navigation-message">
         Already have an account?{" "}
         <a onClick={onLoginClicked} className="navigation">
