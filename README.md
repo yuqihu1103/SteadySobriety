@@ -96,6 +96,7 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 1. [Layout/Hierarchy](docs/design/Design%20of%20Steady%20Sobriety%20-%20Layout_Hierarchy.pdf)
 2. Typography
 3. Color
+![color palette](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/01d98e93-10ee-4114-a9c9-3a8974d29ffe)
 
 ### Accessibility
 
