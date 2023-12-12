@@ -89,12 +89,11 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 ### Usability Study
 
 1. [Consent Form](docs/usability_study/usability_study_informed_consent_document.pdf)
-2. Usability Study Question
-3. Usability Study Report
+2. Usability Study Report
 
 ### User Interface Design
 
-1. Layout/Hierarchy
+1. [Layout/Hierarchy](docs/design/Design%20of%20Steady%20Sobriety%20-%20Layout_Hierarchy.pdf)
 2. Typography
 3. Color
 
