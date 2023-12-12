@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Login.css";
+import InformationPopover from "./InformationPopover";
+
+const infoContent = (
+  <ul>
+    <li>Choose Username or Email to Login</li>
+    <li>Username cannot less than 3 characters.</li>
+    <li>Password cannot less than 6 characters.</li>
+  </ul>
+);
 
 function Login({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
@@ -56,9 +65,12 @@ function Login({ setActiveComponent, setLoggedInUser }) {
 
   return (
     <div className="login-container">
-      <h2 className="login-header">Login</h2>
+      <div className="login-header">
+        <h2 className="login-title">Login</h2>
+        <InformationPopover>{infoContent}</InformationPopover>
+      </div>
       <p className="navigation-message">
-        Don't have an account?{" "}
+        Do not have an account?{" "}
         <a onClick={onRegisterClicked} className="navigation">
           Register
         </a>{" "}
