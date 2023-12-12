@@ -106,8 +106,28 @@
   width: 300px;
 }
 
+.current-rank-display {
+  margin-bottom: 20px; /* Spacing below the current rank */
+}
+
+.current-rank-text {
+  font-size: 1.5rem; /* Bigger than normal text but smaller than h1 */
+  color: #fff; /* Maintain white text color for the entire sentence */
+}
+
+.current-rank {
+  color: red; /* Set the rank number color to red */
+  font-weight: bold; /* Optional: if you want the number to be bold */
+}
+
+/* ... rest of your styles ... */
+
 @media (max-width: 991px) {
   .leaderboard {
     max-width: 90vw;
+  }
+
+  .current-rank-text {
+    font-size: 1rem;
   }
 }

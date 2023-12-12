@@ -57,7 +57,9 @@ function Leaderboard() {
       </div>
 
       <div className="currentRank">
-        <p>Your current rank: {currentRank} </p>
+        <p className="current-rank-text">
+          Your current rank: <span className="current-rank">{currentRank}</span>
+        </p>
       </div>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <span className="last-update">Last Updated: {lastUpdated}</span>
