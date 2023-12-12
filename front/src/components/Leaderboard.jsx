@@ -28,6 +28,18 @@ function Leaderboard() {
     fetchLeaderboardData();
   }, []);
 
+  const medal = (index) => {
+    if (index === 0) {
+      return "🥇";
+    } else if (index === 1) {
+      return "🥈";
+    } else if (index === 2) {
+      return "🥉";
+    } else {
+      return "";
+    }
+  };
+
   return (
     <div className="container mt-4 leaderboard">
       <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
@@ -65,13 +77,7 @@ function Leaderboard() {
                 <tr key={entry.username}>
                   <td>{index + 1}</td>
                   <td>
-                    {index === 0
-                      ? "🥇"
-                      : index === 1
-                      ? "🥈"
-                      : index === 2
-                      ? "🥉"
-                      : ""}
+                    {medal(index)}
                     {entry.username}
                   </td>
                   <td>{entry.streak} days</td>

@@ -74,7 +74,6 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
         <h2>Drinking History</h2>
         <InformationPopover>{infoContent}</InformationPopover>
       </div>
-      {/* The InformationPopover component now includes the toggle button and the content */}
 
       <div className="log-history-scrollable">
         {logHistory.length === 0 ? (
