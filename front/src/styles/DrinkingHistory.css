@@ -38,3 +38,20 @@
 .delete-button {
   color: red;
 }
+
+.history-header {
+  display: flex; /* Use flexbox to layout children */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically */
+  position: relative; /* Needed to position the info button absolutely */
+}
+
+.header-spacer {
+  flex-grow: 1;
+}
+
+.info-icon-button {
+  position: absolute; /* Position the button absolutely within the header */
+  right: 0; /* Align the button to the right */
+  /* Rest of your styles for the button */
+}

@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import InformationPopover from "./InformationPopover";
 import "../styles/DrinkingHistory.css";
+
+const info = `
+         <li>Enter the drinking day in the provided field.</li>
+         <li>Click Save Log to record the day.</li>
+         <li>Your logged drinking days will appear in sorted order.</li>
+         <li>The most recent date will be at the top.</li>
+         <li>
+           Your sober days streak will be shown under the welcome message.
+         </li>
+`;
 
 const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   const [logHistory, setLogHistory] = useState([]);
+  const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
     fetchLogHistory();
@@ -57,9 +69,28 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
     }
   };
 
+  const toggleInfoPopover = () => {
+    setShowInfo(!showInfo);
+  };
+
   return (
     <div className="drinking-history">
-      <h2>Drinking History</h2>
+      <div className="history-header">
+        <h2>Drinking History</h2>
+        <div className="header-spacer"></div> {/* Spacer element */}
+        <button
+          className="info-icon-button"
+          onClick={toggleInfoPopover}
+          aria-label="Info"
+        >
+          ℹ️
+        </button>
+      </div>
+
+      {showInfo && (
+        <InformationPopover content={info} onClose={() => setShowInfo(false)} />
+      )}
+
       <div className="log-history-scrollable">
         {logHistory.length === 0 ? (
           <p className="log-entry">Create your first log!</p>
