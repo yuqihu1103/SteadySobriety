@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Register.css"; // Import the Register component's CSS file
 import PropTypes from "prop-types";
 
-function Register({ setLoggedInUser }) {
+function Register({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -56,12 +56,21 @@ function Register({ setLoggedInUser }) {
     }
   };
 
+  const onLoginClicked = () => {
+    setActiveComponent("Login");
+  };
+
   return (
     <div className="register-container">
       {" "}
-      {/* Add a class name for the container */}
       <h2 className="register-header">Register</h2>{" "}
-      {/* Add a class name for the header */}
+      <p className="navigation-message">
+        Already have an account?{" "}
+        <a onClick={onLoginClicked} className="navigation">
+          Login
+        </a>{" "}
+        now!
+      </p>
       <div className="register-error">{registerError}</div>
       <form className="register-form" onSubmit={handleSubmit}>
         <div>
@@ -115,6 +124,7 @@ function Register({ setLoggedInUser }) {
 
 Register.propTypes = {
   setLoggedInUser: PropTypes.func.isRequired,
+  setActiveComponent: PropTypes.func.isRequired,
 };
 
 export default Register;

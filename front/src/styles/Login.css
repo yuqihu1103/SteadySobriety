@@ -66,6 +66,10 @@
   color: black;
 }
 
+.navigation-message {
+  color: black;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .login-container {

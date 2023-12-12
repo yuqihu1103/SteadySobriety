@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Login.css";
 
-function Login({ setLoggedInUser }) {
+function Login({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
     credential: "", // This can be either username or email
     password: "",
@@ -50,9 +50,20 @@ function Login({ setLoggedInUser }) {
     }
   };
 
+  const onRegisterClicked = () => {
+    setActiveComponent("Register");
+  };
+
   return (
     <div className="login-container">
       <h2 className="login-header">Login</h2>
+      <p className="navigation-message">
+        Don't have an account?{" "}
+        <a onClick={onRegisterClicked} className="navigation">
+          Register
+        </a>{" "}
+        now!
+      </p>
       <div className="login-error">{loginError}</div>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
@@ -94,6 +105,7 @@ function Login({ setLoggedInUser }) {
 
 Login.propTypes = {
   setLoggedInUser: PropTypes.func.isRequired,
+  setActiveComponent: PropTypes.func.isRequired,
 };
 
 export default Login;

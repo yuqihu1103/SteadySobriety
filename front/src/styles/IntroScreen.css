@@ -59,6 +59,11 @@
   flex: 1;
 }
 
+.navigation {
+  color: blue;
+  text-decoration: underline;
+}
+
 /* Footer styling, placing contact info at the bottom */
 .contact {
   color: #fff;

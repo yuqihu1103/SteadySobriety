@@ -58,6 +58,10 @@
   background-color: #4f8e90;
 }
 
+.navigation-message {
+  color: black;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .register-container {

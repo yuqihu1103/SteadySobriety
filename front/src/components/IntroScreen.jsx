@@ -1,7 +1,16 @@
 import React from "react";
 import "../styles/IntroScreen.css";
+import PropTypes from "prop-types";
 
-const IntroScreen = () => {
+const IntroScreen = ({ setActiveComponent }) => {
+  const onRegisterClicked = () => {
+    setActiveComponent("Register");
+  };
+
+  const onLoginClicked = () => {
+    setActiveComponent("Login");
+  };
+
   return (
     <div className="intro-screen">
       <div className="intro-heading-container ">
@@ -27,6 +36,17 @@ const IntroScreen = () => {
               drinking history and current sober streak. Stay sober longer for a
               chance to be on the leaderboard!
             </p>
+            <p className="intro-text">
+              <a onClick={onRegisterClicked} className="navigation">
+                {" "}
+                Register
+              </a>{" "}
+              or{" "}
+              <a onClick={onLoginClicked} className="navigation">
+                login
+              </a>{" "}
+              to start tracking your sober time now!
+            </p>
           </div>
         </div>
       </div>
@@ -37,6 +57,10 @@ const IntroScreen = () => {
       </div>
     </div>
   );
+};
+
+IntroScreen.propTypes = {
+  setActiveComponent: PropTypes.func.isRequired,
 };
 
 export default IntroScreen;

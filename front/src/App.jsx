@@ -67,11 +67,21 @@ function App() {
 
   function renderActiveComponent(componentName) {
     if (componentName === "Intro") {
-      return <IntroScreen />;
+      return <IntroScreen setActiveComponent={setActiveComponent} />;
     } else if (componentName === "Login") {
-      return <Login setLoggedInUser={setLoggedInUser} />;
+      return (
+        <Login
+          setLoggedInUser={setLoggedInUser}
+          setActiveComponent={setActiveComponent}
+        />
+      );
     } else if (componentName === "Register") {
-      return <Register setLoggedInUser={setLoggedInUser} />;
+      return (
+        <Register
+          setLoggedInUser={setLoggedInUser}
+          setActiveComponent={setActiveComponent}
+        />
+      );
     } else if (componentName === "Dashboard") {
       return <Dashboard loggedInUser={loggedInUser} />;
     } else if (componentName === "Resources") {
