@@ -10,14 +10,14 @@
 
 .information-popover {
   position: absolute;
-  top: 50px; /* Adjust as needed */
-  right: 50px; /* Adjust as needed */
-  width: 300px; /* Adjust as needed */
-  background-color: white;
+  top: 50px;
+  right: 50px;
+  width: 300px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Ensures it's above other content */
+  color: white;
 }
 
 /* Content styles */
