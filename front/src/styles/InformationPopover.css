@@ -25,8 +25,14 @@
 }
 
 .info-icon-button {
-  background-color: transparent; /* Set the button background to transparent */
-  border: none; /* Remove any border if present */
+  position: absolute; /* Position the button absolutely within the .history-header */
+  top: 50%; /* Align the button to the top 50% of the container */
+  right: 0; /* Align the button to the right of the container */
+  transform: translateY(-50%); /* Center the button vertically */
+  background-color: transparent; /* Ensure the button background is transparent */
+  border: none; /* Remove any border */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Indicate that it's clickable */
 }
 
 /* Adjust the size of the image if necessary */

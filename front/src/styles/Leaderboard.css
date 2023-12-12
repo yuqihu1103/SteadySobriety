@@ -12,6 +12,14 @@
   border-radius: 6%;
 }
 
+.leaderboard-header {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically */
+  position: relative; /* Needed for absolute positioning of the info button */
+  text-align: center; /* Center the text specifically */
+}
+
 /* Style the header */
 .leaderboard-title {
   margin-top: 3%;

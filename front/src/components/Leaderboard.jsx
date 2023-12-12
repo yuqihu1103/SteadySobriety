@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Leaderboard.css";
+import InformationPopover from "./InformationPopover";
+
+const infoContent = (
+  <ul>
+    <li>Use leaderboad to check streak ranks.</li>
+    <li>You can see your own rank at top of leaderboad</li>
+    <li>Click `Refresh` to see the most updated leaderboad data.</li>
+  </ul>
+);
 
 function Leaderboard() {
   const [leaderboardData, setLeaderboardData] = useState([]);
@@ -42,7 +51,11 @@ function Leaderboard() {
 
   return (
     <div className="container mt-4 leaderboard">
-      <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
+      <div className="leaderboard-header">
+        <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
+        <InformationPopover>{infoContent}</InformationPopover>
+      </div>
+
       <div className="currentRank">
         <p>Your current rank: {currentRank} </p>
       </div>
