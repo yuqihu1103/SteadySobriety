@@ -24,16 +24,31 @@ function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
     setActiveComponent("Dashboard");
   };
 
+  const handleLogoClick = () => {
+    if (loggedInUser) {
+      showDashboard();
+    } else {
+      showIntro();
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="container-fluid">
-        <img
+        <a
           className="navbar-brand"
-          src="/steady-sobriety-favicon.png"
-          alt="Logo of Steady Sobriety"
-          width="40"
-          height="40"
-        />
+          href="#"
+          id="logo"
+          onClick={handleLogoClick}
+        >
+          <img
+            src="/steady-sobriety-favicon.png"
+            alt="Logo of Steady Sobriety"
+            width="45"
+            height="45"
+          />
+          Steady Sobriety
+        </a>
         <ul>
           <li className="nav-item">
             <a href="#" onClick={showResources}>
@@ -55,11 +70,6 @@ function Navbar({ loggedInUser, handleLogout, setActiveComponent }) {
             </>
           ) : (
             <>
-              <li className="nav-item">
-                <a href="#" onClick={showIntro}>
-                  Home
-                </a>
-              </li>
               <li className="nav-item">
                 <a href="#" onClick={showLogin}>
                   Login

@@ -17,7 +17,8 @@ nav li {
   margin-left: 30px; /* Increase spacing between nav items */
 }
 
-nav a {
+nav a,
+.nav-brand {
   text-decoration: none;
   color: #fff; /* Light text for contrast */
   font-size: 18px;
@@ -25,7 +26,8 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+#logo:hover {
   color: #ddd; /* Light grey for hover effect */
 }
 
@@ -46,6 +48,10 @@ nav a:hover {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+}
+
+#logo {
+  color: white;
 }
 
 /* Responsive adjustments for smaller screens */

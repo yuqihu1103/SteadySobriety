@@ -66,11 +66,6 @@
   color: black;
 }
 
-/* the placeholder while leaderboard is loading */
-.loading-placeholder {
-  font-size: 30px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .login-container {
