@@ -34,9 +34,9 @@ const DrinkingLog = ({ loggedInUser, setNumDrinkingLogs, numDrinkingLogs }) => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Log created successfully!");
         setNumDrinkingLogs(numDrinkingLogs + 1);
         setLogDate(""); // Reset the entered date
+        alert("Log created successfully!");
       } else {
         if (response.status === 400) {
           alert("That date has already been recorded.");
