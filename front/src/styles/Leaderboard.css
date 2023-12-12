@@ -116,11 +116,9 @@
 }
 
 .current-rank {
-  color: red; /* Set the rank number color to red */
-  font-weight: bold; /* Optional: if you want the number to be bold */
+  color: red;
+  font-weight: bold;
 }
-
-/* ... rest of your styles ... */
 
 @media (max-width: 991px) {
   .leaderboard {
