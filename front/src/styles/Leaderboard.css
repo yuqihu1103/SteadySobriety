@@ -18,11 +18,16 @@
   align-items: center; /* Align children vertically */
   position: relative; /* Needed for absolute positioning of the info button */
   text-align: center; /* Center the text specifically */
+  margin-top: 3%;
+}
+
+/* Style for the elements inside .leaderboard-header */
+.leaderboard-header > * {
+  margin: 0 5px; /* Adjust the margin as needed for spacing between elements */
 }
 
 /* Style the header */
 .leaderboard-title {
-  margin-top: 3%;
   color: #fff;
 }
 
@@ -93,6 +98,8 @@
   overflow-y: auto; /* Add vertical scrollbar if needed */
   border-radius: 6%;
   margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 /* the placeholder while leaderboard is loading */

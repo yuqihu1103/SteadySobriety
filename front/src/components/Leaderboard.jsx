@@ -50,7 +50,7 @@ function Leaderboard() {
   };
 
   return (
-    <div className="container mt-4 leaderboard">
+    <div className="leaderboard">
       <div className="leaderboard-header">
         <h2 className="mb-3 leaderboard-title">Leaderboard</h2>
         <InformationPopover>{infoContent}</InformationPopover>

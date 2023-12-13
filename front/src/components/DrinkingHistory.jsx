@@ -69,7 +69,7 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
   };
 
   return (
-    <div className="drinking-history">
+    <div className="drinking-history-container">
       <div className="history-header">
         <h2>Drinking History</h2>
         <InformationPopover>{infoContent}</InformationPopover>
