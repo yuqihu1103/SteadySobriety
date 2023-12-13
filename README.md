@@ -4,13 +4,13 @@
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
-**Deployment:** https://steadysobriety.onrender.com/
+**Deployment:** https://steadysobriety.onrender.com (Older version: https://steady-sobriety.onrender.com)
 
 **Project Objectives:**
 
 SteadySobriety is a web application designed to provide essential tools and support for individuals seeking to overcome alcohol abuse
 and maintain lasting sobriety. This platform offers a range of features that help users on their journey towards a healthier,
-alcohol-free life. After registering and logging in, user can log the time of their last drink and view their drinking history. User can keep track of their sobriety streak and compare with other users on the scoreboard. We'll also add a discussion forum and improve on desgin, accessibility and usability in the future.
+alcohol-free life. After registering and logging in, user can log the time of their last drink and view their drinking history. User can keep track of their sobriety streak and compare with other users on the scoreboard. The application has been iterated with considerations in desgin, accessibility and usability. We'll also add a discussion forum in the future.
 
 ## Project Demo and Presentation
 
@@ -18,7 +18,7 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 **Project Presentation and Slides:**
 
-Iteration with design, accessibilty, and usability: 2-min Presentation | Slides
+Iteration with design, accessibilty, and usability: 2-min Presentation | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
 Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
@@ -108,11 +108,10 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 <img width="623" alt="color palette" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/b25a2544-c18a-47f7-86f1-6890d263d160">
 
 ### Accessibility
+Accessibility test result with axe or lighthouse
 
-1. Using the application with only keyboard
-2. Accessibility test result with axe or lighthouse
-   ![Accessibility test results before login using Lighthouse](front/public/lighthouse_before_login.jpg)
-   ![Accessibility test results after login using Lighthouse](front/public/lighthouse_after_login.jpg)
+<img width="623" alt="lighthouse_before_login" src="front/public/lighthouse_before_login.jpg">
+<img width="623" alt="lighthouse_after_login" src="front/public/lighthouse_after_login.jpg">
 
 ## Technologies
 
