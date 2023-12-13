@@ -4,7 +4,7 @@
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
-**Deployment:** https://steady-sobriety.onrender.com/
+**Deployment:** https://steadysobriety.onrender.com/
 
 **Project Objectives:**
 
@@ -24,7 +24,7 @@ Older version with main functionalities: [2-min Presentation](https://youtu.be/7
 
 **Overview(after iteration)**
 
-![overview](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/14468840-d388-463c-9cbf-0826d3bd8d76)
+![Merged_document](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/4762626e-6e1b-4553-bee5-801ce03723c9)
 
 ## Instructions to Build
 
