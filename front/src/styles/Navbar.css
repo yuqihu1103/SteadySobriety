@@ -1,5 +1,5 @@
 nav {
-  background-color: #2f2633; /* Dark background for contrast */
+  background-color: #132539; /* Dark background for contrast */
   padding: 15px 20px; /* Increase padding for a larger navbar */
   border-bottom: 3px solid #555; /* Add a border for definition */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
@@ -20,7 +20,7 @@ nav li {
 nav a,
 .nav-brand {
   text-decoration: none;
-  color: #fff; /* Light text for contrast */
+  color: white; /* Light text for contrast */
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: color 0.3s;
@@ -28,7 +28,7 @@ nav a,
 
 nav a:hover,
 #logo:hover {
-  color: #ddd; /* Light grey for hover effect */
+  color: #f6fbff; /* Light grey for hover effect */
 }
 
 .nav-item {

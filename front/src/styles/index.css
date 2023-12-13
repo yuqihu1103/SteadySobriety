@@ -66,7 +66,7 @@ body {
 }
 
 html {
-  background: url("/general-background.jpg") center center fixed;
+  background: url("/base_color.png") center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

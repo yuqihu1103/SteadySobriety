@@ -1,4 +1,5 @@
 /* Content wrapper styling */
+
 .content-wrapper {
   display: flex;
   justify-content: center; /* Center the children */
@@ -6,6 +7,7 @@
   flex-wrap: wrap; /* Allow the items to wrap as needed */
   margin: 0 auto; /* Center the content wrapper */
   margin-bottom: 1.5%;
+  background-color: #f6fbff;
 }
 
 /* Adjust if you're using Bootstrap Grid */
@@ -17,16 +19,16 @@
 /* Text content styling */
 .intro-text {
   order: -1; /* This will move the text to the left on larger screens */
-  color: black;
+  color: #132539;
   padding: 10px;
-  font-size: larger;
+  font-size: large;
 }
 
 .instruction-text {
   order: -1; /* This will move the text to the left on larger screens */
-  color: black;
+  color: #132539;
   padding: 10px;
-  font-size: larger;
+  font-size: large;
 }
 
 /* Main photo styling */
@@ -49,7 +51,7 @@
 
 /* Header styling */
 .intro-heading {
-  color: #1f3a59;
+  color: #132539;
   font-size: 2.5rem;
   margin-bottom: 1em;
 }
@@ -63,13 +65,13 @@
 
 /* Content styling */
 .intro-content {
+  background-color: #f6fbff;
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   grid-template-rows: auto 1fr;
-  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 0;
 }
@@ -88,8 +90,12 @@
 }
 
 .navigation {
-  color: blue;
+  color: #d35400;
   text-decoration: underline;
+}
+
+.navigation:hover {
+  color: #ea9861;
 }
 
 .contact {
@@ -97,14 +103,9 @@
   bottom: 0; /* Anchors the contact info to the bottom */
   left: 0; /* Anchors the contact info to the left */
   width: 100%; /* Span the full width */
-  color: #fff;
+  color: #132539;
   padding: 10px 0;
   text-align: center;
   z-index: 2;
-  background-color: rgba(
-    18,
-    4,
-    44,
-    0.4
-  ); /* Ensure readability over the background image */
+  background-color: #aacfd0;
 }

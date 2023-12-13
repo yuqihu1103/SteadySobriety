@@ -5,9 +5,10 @@
   margin: 50px auto;
   margin-top: 8%;
   padding: 20px;
-  background: #fff;
+  background: #f6fbff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #132539;
 }
 
 .login-header {
@@ -16,10 +17,6 @@
   align-items: center; /* Align children vertically */
   position: relative; /* Needed for absolute positioning of the info button */
   text-align: center; /* Center the text specifically */
-}
-
-.login-title {
-  color: #000;
 }
 
 .login-error {
@@ -36,7 +33,11 @@
 .login-form label {
   margin-bottom: 5px;
   display: block;
-  color: #666;
+  color: #132539;
+}
+
+.login-title {
+  color: #132539;
 }
 
 .login-form input[type="text"],
@@ -45,11 +46,14 @@
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
-  background-color: beige;
+  border: 1px solid #132539;
   border-radius: 4px;
-  color: black;
+  color: #132539;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.login-form select {
+  background-color: #b2b9c1;
 }
 
 /* Style the submit button */
@@ -57,25 +61,26 @@
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: #5f9ea0;
-  color: white;
+  background-color: #132539;
+  color: #f6fbff;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 1.5%;
 }
 
 .login-form button:hover {
-  background-color: #4f8e90;
+  background-color: #132539;
 }
 
 /* Style the dropdown */
 .login-form select {
   background-color: rgba(255, 255, 255, 0.664);
-  color: black;
+  color: #132539;
 }
 
 .navigation-message {
-  color: black;
+  color: #132539;
 }
 
 /* Responsive adjustments */

@@ -11,7 +11,7 @@
 }
 
 .register-title {
-  color: #000;
+  color: #132539;
 }
 
 /* Align the form to the center of the page */
@@ -21,22 +21,16 @@
   margin: 50px auto;
   margin-top: 8%;
   padding: 20px;
-  background: #fff;
+  background: #f6fbff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the form header */
-.register-form h2 {
-  margin-bottom: 20px;
-  color: #5f9ea0;
 }
 
 /* Style form labels and inputs */
 .register-form label {
   margin-bottom: 5px;
   display: block;
-  color: #666;
+  color: #132539;
 }
 
 .register-form input[type="text"],
@@ -45,7 +39,7 @@
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #132539;
   border-radius: 4px;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -55,11 +49,12 @@
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: #5f9ea0;
-  color: white;
+  background-color: #132539;
+  color: #f6fbff;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 1.5%;
 }
 
 .register-form button:hover {
@@ -67,7 +62,7 @@
 }
 
 .navigation-message {
-  color: black;
+  color: #132539;
 }
 
 /* Responsive adjustments */
