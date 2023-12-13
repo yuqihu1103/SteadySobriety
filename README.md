@@ -14,11 +14,13 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 ## Project Demo and Presentation
 
-**Project Demo Video:** Iteration with design, accessibilty, and usability | [Older version with main functionalities](https://youtu.be/a0rUKtjYNrE)
+**Project Demo Video:** Iteration with design, accessibilty, and usability |
+[New version with design, accessibility and usability](https://youtu.be/jszyrdpvYUk?si=V6d4a_99pOrQiRZZ)
+[Older version with main functionalities](https://youtu.be/a0rUKtjYNrE)
 
 **Project Presentation and Slides:**
 
-Iteration with design, accessibilty, and usability: 2-min Presentation | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
+Iteration version with design, accessibilty, and usability: [2-min Presentation](https://youtu.be/SkMSJD9L3PU?si=_LXNwgvP-8VgET-N) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
 Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
@@ -108,6 +110,7 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 <img width="623" alt="color palette" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/b25a2544-c18a-47f7-86f1-6890d263d160">
 
 ### Accessibility
+
 Accessibility test result with axe or lighthouse
 
 <img width="623" alt="lighthouse_before_login" src="front/public/lighthouse_before_login.jpg">
