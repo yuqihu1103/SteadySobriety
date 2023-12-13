@@ -20,7 +20,7 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 Iteration with design, accessibilty, and usability: 2-min Presentation | Slides
 
-Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
 **Overview(after iteration)**
 
@@ -111,7 +111,8 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 
 1. Using the application with only keyboard
 2. Accessibility test result with axe or lighthouse
-   ![Accessibility test results using Lighthouse](front/public/lighthouse.png)
+   ![Accessibility test results before login using Lighthouse](front/public/lighthouse_before_login.jpg)
+   ![Accessibility test results after login using Lighthouse](front/public/lighthouse_after_login.jpg)
 
 ## Technologies
 
