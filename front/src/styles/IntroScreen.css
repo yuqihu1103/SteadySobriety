@@ -1,5 +1,4 @@
 /* Content wrapper styling */
-
 .content-wrapper {
   display: flex;
   justify-content: center; /* Center the children */
@@ -22,6 +21,7 @@
   color: #132539;
   padding: 10px;
   font-size: large;
+  font-family: "Quicksand", sans-serif;
 }
 
 .instruction-text {
@@ -29,6 +29,7 @@
   color: #132539;
   padding: 10px;
   font-size: large;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Main photo styling */
@@ -52,7 +53,9 @@
 /* Header styling */
 .intro-heading {
   color: #132539;
-  font-size: 3rem;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Euphoria Script", cursive;
 }
 
 /* Content styling */
@@ -66,6 +69,7 @@
   grid-template-rows: auto 1fr;
   border-radius: 10px;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
 .row {
@@ -100,4 +104,5 @@
   text-align: center;
   z-index: 2;
   background-color: #aacfd0;
+  font-family: "Quicksand", sans-serif;
 }

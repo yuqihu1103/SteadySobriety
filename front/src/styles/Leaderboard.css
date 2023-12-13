@@ -10,6 +10,7 @@
   background: #132539;
   border: 0.3em double #8271d2;
   border-radius: 6%;
+  font-family: "Quicksand", sans-serif;
 }
 
 .leaderboard-header {
@@ -19,6 +20,7 @@
   position: relative; /* Needed for absolute positioning of the info button */
   text-align: center; /* Center the text specifically */
   margin-top: 3%;
+  font-family: "Play", sans-serif;
 }
 
 /* Style for the elements inside .leaderboard-header */
@@ -124,7 +126,8 @@
 
 .current-rank {
   color: #d35400;
-  font-weight: bold;
+  font-weight: bolder;
+  font-family: "Play", sans-serif;
 }
 
 @media (max-width: 991px) {

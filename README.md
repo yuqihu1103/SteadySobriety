@@ -16,7 +16,7 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 **Project Demo Video:** Iteration with design, accessibilty, and usability | [Older version with main functionalities](https://youtu.be/a0rUKtjYNrE)
 
-**Project Presentation and Slides:** 
+**Project Presentation and Slides:**
 
 Iteration with design, accessibilty, and usability: 2-min Presentation | Slides
 
@@ -102,14 +102,14 @@ Learn more about the designm accessibility, and usability of the Steady Sobriety
 ### User Interface Design
 
 1. [Layout/Hierarchy](docs/design/Design%20of%20Steady%20Sobriety%20-%20Layout_Hierarchy.pdf)
-2. Typography
+2. [Typography](docs/design/Design%20of%20Steady%20Sobriety%20-%20Typography.pdf)
 3. [Color](docs/design/Design%20of%20Steady%20Sobriety%20-%20Color.pdf)
 
 <img width="623" alt="color palette" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/b25a2544-c18a-47f7-86f1-6890d263d160">
 
 ### Accessibility
 
-1. Demonstration of using the application with only keyboard
+1. Using the application with only keyboard
 2. Accessibility test result with axe or lighthouse
    ![Accessibility test results using Lighthouse](front/public/lighthouse.png)
 

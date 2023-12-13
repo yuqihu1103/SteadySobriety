@@ -11,18 +11,21 @@
 .welcome-message {
   font-size: 28px;
   margin: 10px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .welcome-username {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: "Play", sans-serif;
 }
 
 .streak-days {
   color: #d35400; /* Set the color to red */
-  font-weight: bold;
+  font-weight: bolder;
   margin: 0 5px; /* Add horizontal margin for spacing */
+  font-family: "Play", sans-serif;
 }
 
 /* Adjust this margin to control the space between the username and the message */

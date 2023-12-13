@@ -6,6 +6,7 @@
   z-index: 1000; /* Ensures it's above other content */
   color: white;
   background-color: transparent; /* Makes the background transparent */
+  font-family: "Quicksand", sans-serif;
 }
 
 .information-content {

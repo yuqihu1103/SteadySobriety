@@ -17,6 +17,7 @@
   padding: 8px;
   border-bottom: 1px solid #eaeaea; /* A light separator for each entry */
   color: #000; /* Set text color to black */
+  font-family: "Quicksand", sans-serif;
 }
 
 .log-entry {
@@ -58,6 +59,7 @@
   background-color: #4f8e90;
   color: #f6fbff;
   cursor: pointer;
+  font-family: "Quicksand", sans-serif;
 }
 
 .delete-button:hover {
@@ -71,6 +73,7 @@
   position: relative; /* Needed for absolute positioning of the info button */
   text-align: center; /* Center the text specifically */
   margin-top: 3%;
+  font-family: "Play", sans-serif;
 }
 
 /* If you have a spacer div, it might not be necessary anymore, depending on your layout */
@@ -80,6 +83,7 @@
 
 .drinking-history {
   position: relative; /* This makes it the reference for its absolutely positioned children */
+  font-family: "Quicksand", sans-serif;
 }
 
 .newest {

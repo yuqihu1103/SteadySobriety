@@ -9,6 +9,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #132539;
+  font-family: "Quicksand", sans-serif;
 }
 
 .login-header {
@@ -38,6 +39,7 @@
 
 .login-title {
   color: #132539;
+  font-family: "Play", sans-serif;
 }
 
 .login-form input[type="text"],
@@ -48,7 +50,6 @@
   margin-bottom: 15px;
   border: 1px solid #132539;
   border-radius: 4px;
-  color: #132539;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
