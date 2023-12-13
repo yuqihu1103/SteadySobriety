@@ -52,15 +52,7 @@
 /* Header styling */
 .intro-heading {
   color: #132539;
-  font-size: 2.5rem;
-  margin-bottom: 1em;
-}
-
-/* Header styling */
-.intro-heading-container {
-  margin-top: 0;
-  width: 100%;
-  text-align: center;
+  font-size: 3rem;
 }
 
 /* Content styling */
