@@ -13,7 +13,11 @@ const infoContent = (
   </ul>
 );
 
-const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
+const DrinkingHistory = ({
+  loggedInUser,
+  numDrinkingLogs,
+  setNumDrinkingLogs,
+}) => {
   const [logHistory, setLogHistory] = useState([]);
 
   useEffect(() => {
@@ -56,6 +60,7 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
           body: JSON.stringify({ date }),
         });
         if (response.ok) {
+          setNumDrinkingLogs(numDrinkingLogs - 1);
           // Refresh the log history to reflect the deletion
           fetchLogHistory();
         } else {
@@ -109,6 +114,7 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
 DrinkingHistory.propTypes = {
   loggedInUser: PropTypes.string.isRequired,
   numDrinkingLogs: PropTypes.number.isRequired,
+  setNumDrinkingLogs: PropTypes.func.isRequired,
 };
 
 export default DrinkingHistory;

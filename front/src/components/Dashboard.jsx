@@ -21,6 +21,7 @@ function Dashboard({ loggedInUser }) {
           <DrinkingHistory
             loggedInUser={loggedInUser}
             numDrinkingLogs={numDrinkingLogs}
+            setNumDrinkingLogs={setNumDrinkingLogs}
           />
           <DrinkingLog
             loggedInUser={loggedInUser}
