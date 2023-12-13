@@ -1,10 +1,8 @@
 .welcome-container {
-  background-color: rgba(18, 4, 44, 0.4); /* Dark background color */
-  color: #fff; /* White text color */
+  color: #132539;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
   width: 60vw;
   max-width: 75vw;
