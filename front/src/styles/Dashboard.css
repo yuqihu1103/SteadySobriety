@@ -1,5 +1,4 @@
 .dashboard {
-  overflow: auto;
   margin-bottom: 2%;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .welcome {
-  margin: 3%;
   display: flex;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */

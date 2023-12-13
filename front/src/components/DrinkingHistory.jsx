@@ -68,6 +68,14 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
     }
   };
 
+  const newest = (index) => {
+    if (index === 0) {
+      return "newest";
+    } else {
+      return "";
+    }
+  };
+
   return (
     <div className="drinking-history-container">
       <div className="history-header">
@@ -81,7 +89,9 @@ const DrinkingHistory = ({ loggedInUser, numDrinkingLogs }) => {
         ) : (
           logHistory.map((log, index) => (
             <div className="log-entry" key={index}>
-              {new Date(log.date).toLocaleDateString()}
+              <div className={newest(index)}>
+                {new Date(log.date).toLocaleDateString()}
+              </div>
               <button
                 className="delete-button"
                 onClick={() => deleteLog(log.date)}

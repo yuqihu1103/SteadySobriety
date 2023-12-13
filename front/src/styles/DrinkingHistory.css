@@ -19,6 +19,19 @@
   color: #000; /* Set text color to black */
 }
 
+.log-entry {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically */
+  position: relative; /* Needed for absolute positioning of the info button */
+  text-align: center; /* Center the text specifically */
+}
+
+/* Style for the elements inside .leaderboard-header */
+.log-entry > * {
+  margin: 0 5px; /* Adjust the margin as needed for spacing between elements */
+}
+
 /* Add a hover effect for each log entry for better interactivity */
 .log-entry:hover {
   background-color: #f5f5f5;
@@ -42,7 +55,13 @@
 }
 
 .delete-button {
-  color: red;
+  background-color: #4f8e90;
+  color: #f6fbff;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #aacfd0;
 }
 
 .history-header {
@@ -61,4 +80,9 @@
 
 .drinking-history {
   position: relative; /* This makes it the reference for its absolutely positioned children */
+}
+
+.newest {
+  color: #d35400;
+  font-weight: bold;
 }
