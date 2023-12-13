@@ -46,7 +46,7 @@ const Resources = () => {
 
   return (
     <div className="resources">
-      <h1 className="resource-title">Additional Tools and Resources</h1>
+      <h1 className="main-resource-title">Additional Tools and Resources</h1>
       <div className="resource-cards-container">
         {resources1.map((resource, index) => (
           <div key={index} className="resource-card">
