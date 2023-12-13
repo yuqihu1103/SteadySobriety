@@ -20,7 +20,7 @@ alcohol-free life. After registering and logging in, user can log the time of th
 
 Iteration with design, accessibilty, and usability: 2-min Presentation | Slides
 
-Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
 **Overview(after iteration)**
 
