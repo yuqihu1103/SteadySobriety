@@ -22,7 +22,7 @@
 }
 
 .streak-days {
-  color: #d35400; /* Set the color to red */
+  color: #d35400f1;
   font-weight: bolder;
   margin: 0 5px; /* Add horizontal margin for spacing */
   font-family: "Play", sans-serif;

@@ -35,6 +35,10 @@
   color: #132539;
 }
 
+a:hover {
+  color: #a14507;
+}
+
 .register-form input[type="text"],
 .register-form input[type="password"],
 .register-form input[type="email"] {

@@ -56,14 +56,14 @@
 }
 
 .delete-button {
-  background-color: #4f8e90;
-  color: #f6fbff;
+  background-color: #aacfd0;
+  color: #132539;
   cursor: pointer;
   font-family: "Quicksand", sans-serif;
 }
 
 .delete-button:hover {
-  background-color: #aacfd0;
+  background-color: #0b777a;
 }
 
 .history-header {
@@ -87,6 +87,6 @@
 }
 
 .newest {
-  color: #d35400;
+  color: #be4c00;
   font-weight: bold;
 }

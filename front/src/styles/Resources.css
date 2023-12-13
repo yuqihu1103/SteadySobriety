@@ -38,11 +38,11 @@
 
 .resource-title-link {
   text-decoration: underline;
-  color: #d35400;
+  color: #d35400f1;
 }
 
 .resource-title-link:hover {
-  color: #eb9155;
+  color: #8e4819;
 }
 
 .main-resource-title {
