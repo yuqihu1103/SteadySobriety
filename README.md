@@ -77,6 +77,7 @@ You can also run our script to generate new mock data before initializing databa
 ```
 node db/mock_data/mock_data.js
 ```
+// Also maybe have a front end section saying how to run the frontend dev server.
 
 ## Project Design
 
@@ -127,3 +128,6 @@ Accessibility test result with axe or lighthouse
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) for details.
+
+
+
