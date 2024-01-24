@@ -33,7 +33,7 @@ const IntroScreen = () => {
       <div className="contact">
         <p>Contact the Authors:</p>
         <p>Email: hu.yuqi@northeastern.edu</p>
-        <p>Email: zhang.zhiq@northeastern.edu</p>
+        <p>Email: zhang.zhiqi@northeastern.edu</p>
       </div>
     </div>
   );
