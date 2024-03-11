@@ -1,0 +1,37 @@
+.information-popover {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 300px;
+  z-index: 1000; /* Ensures it's above other content */
+  color: white;
+  background-color: transparent; /* Makes the background transparent */
+  font-family: "Quicksand", sans-serif;
+}
+
+.information-content {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: black;
+}
+
+.information-popover li {
+  margin-bottom: 10px;
+}
+
+.info-icon-button {
+  transform: translateY(-50%); /* Center the button vertically */
+  background-color: transparent; /* Ensure the button background is transparent */
+  border: none; /* Remove any border */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Indicate that it's clickable */
+}
+
+/* Adjust the size of the image if necessary */
+.info-icon-button img {
+  width: 24px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  background: transparent;
+}

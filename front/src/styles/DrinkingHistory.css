@@ -4,13 +4,33 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 5px;
-  background-color: #fff;
+  background-color: #f6fbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto; /* Center the log in the middle of the page */
 }
 
 .log-entry {
   padding: 8px;
   border-bottom: 1px solid #eaeaea; /* A light separator for each entry */
   color: #000; /* Set text color to black */
+  font-family: "Quicksand", sans-serif;
+}
+
+.log-entry {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically */
+  position: relative; /* Needed for absolute positioning of the info button */
+  text-align: center; /* Center the text specifically */
+}
+
+/* Style for the elements inside .leaderboard-header */
+.log-entry > * {
+  margin: 0 5px; /* Adjust the margin as needed for spacing between elements */
 }
 
 /* Add a hover effect for each log entry for better interactivity */
@@ -24,13 +44,49 @@
 }
 
 .log-history-scrollable::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f6fbff;
 }
 
 .log-history-scrollable::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #f6fbff;
 }
 
 .log-history-scrollable::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #b2b9c1;
+}
+
+.delete-button {
+  background-color: #aacfd0;
+  color: #132539;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+}
+
+.delete-button:hover {
+  background-color: #0b777a;
+}
+
+.history-header {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically */
+  position: relative; /* Needed for absolute positioning of the info button */
+  text-align: center; /* Center the text specifically */
+  margin-top: 3%;
+  font-family: "Play", sans-serif;
+}
+
+/* If you have a spacer div, it might not be necessary anymore, depending on your layout */
+.header-spacer {
+  flex-grow: 1; /* This will push the button to the right */
+}
+
+.drinking-history {
+  position: relative; /* This makes it the reference for its absolutely positioned children */
+  font-family: "Quicksand", sans-serif;
+}
+
+.newest {
+  color: #be4c00;
+  font-weight: bold;
 }

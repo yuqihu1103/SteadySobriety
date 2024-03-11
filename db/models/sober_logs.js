@@ -6,6 +6,14 @@ const SoberLogModel = {
   async createSoberLog(username, date) {
     const db = getDatabase();
     const soberLogsCollection = db.collection("sober_logs");
+
+    // Check if a log with the same date already exists for the user
+    const existingLog = await soberLogsCollection.findOne({ username, date });
+    if (existingLog) {
+      throw new Error("Date already recorded");
+    }
+
+    // If no existing log is found, insert a new log
     return soberLogsCollection.insertOne({ username, date });
   },
 

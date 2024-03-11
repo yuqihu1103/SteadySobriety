@@ -16,7 +16,14 @@ router.get("/leaderboard", async (req, res) => {
     const top50 = users
       .slice(0, 50)
       .map((user) => ({ username: user.username, streak: user.streak }));
-    res.json(top50);
+
+    // Find the user's rank in the leaderboard
+    const currentUser = users.find(
+      (user) => user.username === req.user.username
+    );
+    const currentUserRank = users.indexOf(currentUser) + 1;
+
+    res.json({ top50, currentUserRank });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });

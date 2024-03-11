@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Login.css";
+import InformationPopover from "./InformationPopover";
 
-function Login({ setLoggedInUser }) {
+const infoContent = (
+  <ul>
+    <li>Choose Username or Email to Login</li>
+    <li>Username cannot less than 3 characters.</li>
+    <li>Password cannot less than 6 characters.</li>
+  </ul>
+);
+
+function Login({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
     credential: "", // This can be either username or email
     password: "",
@@ -50,9 +59,23 @@ function Login({ setLoggedInUser }) {
     }
   };
 
+  const onRegisterClicked = () => {
+    setActiveComponent("Register");
+  };
+
   return (
     <div className="login-container">
-      <h2 className="login-header">Login</h2>
+      <div className="login-header">
+        <h2 className="login-title">Login</h2>
+        <InformationPopover>{infoContent}</InformationPopover>
+      </div>
+      <p className="navigation-message">
+        Do not have an account?{" "}
+        <a onClick={onRegisterClicked} className="navigation">
+          Register
+        </a>{" "}
+        now!
+      </p>
       <div className="login-error">{loginError}</div>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
@@ -73,6 +96,7 @@ function Login({ setLoggedInUser }) {
             name="credential"
             value={formData.credential}
             onChange={handleChange}
+            placeholder={credentialType}
           />
         </div>
         <div>
@@ -82,6 +106,7 @@ function Login({ setLoggedInUser }) {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Password"
           />
         </div>
         <button type="submit">Login</button>
@@ -92,6 +117,7 @@ function Login({ setLoggedInUser }) {
 
 Login.propTypes = {
   setLoggedInUser: PropTypes.func.isRequired,
+  setActiveComponent: PropTypes.func.isRequired,
 };
 
 export default Login;

@@ -20,6 +20,9 @@ router.post("/sober-log", async (req, res) => {
       logId: newLog.insertedId,
     });
   } catch (error) {
+    if (error.message === "Date already recorded") {
+      return res.status(400).json({ error: "Date already recorded" });
+    }
     console.error("Error creating sober log:", error);
     res.status(500).json({ error: "Failed to create sober log" });
   }

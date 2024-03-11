@@ -17,10 +17,11 @@ function Dashboard({ loggedInUser }) {
         />
       </div>
       <div className="row">
-        <div className="col-lg-6 col-12 drinking-info">
+        <div className="col-lg-6 col-12 drinking-info" id="drinking-info">
           <DrinkingHistory
             loggedInUser={loggedInUser}
             numDrinkingLogs={numDrinkingLogs}
+            setNumDrinkingLogs={setNumDrinkingLogs}
           />
           <DrinkingLog
             loggedInUser={loggedInUser}

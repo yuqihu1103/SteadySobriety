@@ -1,24 +1,31 @@
 .welcome-container {
-  background-color: rgba(18, 4, 44, 0.4); /* Dark background color */
-  color: #fff; /* White text color */
+  color: #132539;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
   width: 60vw;
   max-width: 75vw;
 }
 
 .welcome-message {
-  font-size: 24px;
+  font-size: 28px;
   margin: 10px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .welcome-username {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: "Play", sans-serif;
+}
+
+.streak-days {
+  color: #d35400f1;
+  font-weight: bolder;
+  margin: 0 5px; /* Add horizontal margin for spacing */
+  font-family: "Play", sans-serif;
 }
 
 /* Adjust this margin to control the space between the username and the message */

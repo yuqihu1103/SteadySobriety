@@ -1,8 +1,18 @@
 import React, { useState } from "react";
-import "../styles/Register.css"; // Import the Register component's CSS file
+import "../styles/Register.css";
 import PropTypes from "prop-types";
+import InformationPopover from "./InformationPopover";
 
-function Register({ setLoggedInUser }) {
+const infoContent = (
+  <ul>
+    <li>Enter Username, Email, and Password to Register.</li>
+    <li>Email must be valid.</li>
+    <li>Username cannot less than 3 characters.</li>
+    <li>Password cannot less than 6 characters.</li>
+  </ul>
+);
+
+function Register({ setActiveComponent, setLoggedInUser }) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -56,12 +66,24 @@ function Register({ setLoggedInUser }) {
     }
   };
 
+  const onLoginClicked = () => {
+    setActiveComponent("Login");
+  };
+
   return (
     <div className="register-container">
       {" "}
-      {/* Add a class name for the container */}
-      <h2 className="register-header">Register</h2>{" "}
-      {/* Add a class name for the header */}
+      <div className="register-header">
+        <h2 className="register-title">Register</h2>{" "}
+        <InformationPopover>{infoContent}</InformationPopover>
+      </div>
+      <p className="navigation-message">
+        Already have an account?{" "}
+        <a onClick={onLoginClicked} className="navigation">
+          Login
+        </a>{" "}
+        now!
+      </p>
       <div className="register-error">{registerError}</div>
       <form className="register-form" onSubmit={handleSubmit}>
         <div>
@@ -73,6 +95,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             minLength={3}
+            placeholder="Username"
           />
         </div>
         <div>
@@ -84,6 +107,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+            placeholder="Email"
           />
         </div>
         <div>
@@ -95,6 +119,7 @@ function Register({ setLoggedInUser }) {
             onChange={handleChange}
             required
             minLength={6}
+            placeholder="Password"
           />
           {/* Conditionally render the password error message */}
           {passwordError && (
@@ -112,6 +137,7 @@ function Register({ setLoggedInUser }) {
 
 Register.propTypes = {
   setLoggedInUser: PropTypes.func.isRequired,
+  setActiveComponent: PropTypes.func.isRequired,
 };
 
 export default Register;

@@ -4,24 +4,29 @@
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
-**Deployment:** https://steady-sobriety.onrender.com/
+**Deployment:** https://steadysobriety.onrender.com (Older version: https://steady-sobriety.onrender.com)
 
 **Project Objectives:**
 
 SteadySobriety is a web application designed to provide essential tools and support for individuals seeking to overcome alcohol abuse
 and maintain lasting sobriety. This platform offers a range of features that help users on their journey towards a healthier,
-alcohol-free life. After registering and logging in, user can log the time of their last drink and view their drinking history. User can keep track of their sobriety streak and compare with other users on the scoreboard. We'll also add a discussion forum and improve on desgin, accessibility and usability in the future.
+alcohol-free life. After registering and logging in, user can log the time of their last drink and view their drinking history. User can keep track of their sobriety streak and compare with other users on the scoreboard. The application has been iterated with considerations in desgin, accessibility and usability. We'll also add a discussion forum in the future.
 
 ## Project Demo and Presentation
 
-**Project Demo Video:** [3-min Demo](https://youtu.be/a0rUKtjYNrE)
+**Project Demo Video:** Iteration with design, accessibilty, and usability |
+[New version with design, accessibility and usability](https://youtu.be/jszyrdpvYUk?si=V6d4a_99pOrQiRZZ)
+[Older version with main functionalities](https://youtu.be/a0rUKtjYNrE)
 
-**Project Presentation and Slides:** [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1bwjb_-aFty6QstsUDy_j1427GTJmW1Us-pnAwRehrSU/edit#slide=id.g297f0f13694_0_108)
+**Project Presentation and Slides:**
 
-**Overview(gif)**
+Iteration version with design, accessibilty, and usability: [2-min Presentation](https://youtu.be/SkMSJD9L3PU?si=_LXNwgvP-8VgET-N) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
-![overview](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/14468840-d388-463c-9cbf-0826d3bd8d76)
+Older version with main functionalities: [2-min Presentation](https://youtu.be/7kqo9yISblk) | [Slides](https://docs.google.com/presentation/d/1F63kRn9zopnV32ihnk0sjxgKKzszRjpm6UbsKWnjjV4/edit?usp=sharing)
 
+**Overview(after iteration)**
+
+![Merged_document](https://github.com/yuqihu1103/SteadySobriety/assets/133090163/4762626e-6e1b-4553-bee5-801ce03723c9)
 
 ## Instructions to Build
 
@@ -82,6 +87,34 @@ Design documents can be found in the [docs](docs) folder, including:
 3. [Design Mockup](docs/design_mockup.pdf) overview:
 
 <img width="523" alt="design mockup overview" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/e11567d2-612c-4429-9078-e846fb4e50d8">
+
+## More Design, Accessibility and Usability
+
+Learn more about the designm accessibility, and usability of the Steady Sobriety application.
+
+### Usability Study
+
+1. [Consent Form](docs/usability_study/usability_study_informed_consent_document.pdf)
+2. [Usability Study Report](docs/usability_study/Usability%20Study%20Report.pdf), including:
+
+   - Application scope (users, tasks and data)
+   - Experiment prepration and interview notes
+   - Summary of the most crucial issues and changes proposed and made
+
+### User Interface Design
+
+1. [Layout/Hierarchy](docs/design/Design%20of%20Steady%20Sobriety%20-%20Layout_Hierarchy.pdf)
+2. [Typography](docs/design/Design%20of%20Steady%20Sobriety%20-%20Typography.pdf)
+3. [Color](docs/design/Design%20of%20Steady%20Sobriety%20-%20Color.pdf)
+
+<img width="623" alt="color palette" src="https://github.com/yuqihu1103/SteadySobriety/assets/133090163/b25a2544-c18a-47f7-86f1-6890d263d160">
+
+### Accessibility
+
+Accessibility test result with axe or lighthouse
+
+<img width="623" alt="lighthouse_before_login" src="front/public/lighthouse_before_login.jpg">
+<img width="623" alt="lighthouse_after_login" src="front/public/lighthouse_after_login.jpg">
 
 ## Technologies
 
